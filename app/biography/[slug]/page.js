@@ -4,69 +4,23 @@ import PopularPostSideBarComponent from "@/components/PopularPostSideBarComponen
 import SpotCelebSideBarComponent from "@/components/SpotCelebSideBarComponent"
 import TabLinkCelebComponent from "@/components/TabLinkCelebComponent"
 
-export default function BiographySlugPage({params}){
-    const data = 
-        {
-          id: 1,
-          image: "http://localhost:8000/celebrities/read-recommend-logo.png",
-          industry: [
-            {
-              id: 1,
-              name: "Bollywood",
-              name_slug: "bollywood"
-            },
-            {
-                id: 2,
-                name: "Tollywood",
-                name_slug: "tollywood"
-              }
-          ],
-          roles: [
-            {
-              id: 1,
-              name: "ACTOR",
-              name_slug: "actor"
-            }
-          ],
-          biography: {
-            id: 1,
-            image: "http://localhost:8000/celebrities/456.png",
-            nickname: "ak",
-            date_of_birth: "2024-06-09",
-            date_of_death: null,
-            marital_status: "Single",
-            nationality: "Indian",
-            gender: "Male",
-            net_worth_currency: "USD",
-            net_worth: "100000000.00",
-            height: "135 cm",
-            eye_color: "black",
-            hair_color: "black",
-            birthplace: "Moradabad",
-            zodiac_sign: "Gemini",
-            hometown: "hardoi",
-            school: "SSCA",
-            college: "KITE",
-            education_qualification: "Btech",
-            ethnicity: "North Indian",
-            vegetarian: false,
-            favorite_food: "Butter Chicken, Nutton",
-            website: "http://readrecommend.com",
-            instagram_followers: 32,
-            instagram: null,
-            twitter: null,
-            facebook: null,
-            youtube: null
-          },
-          first_name: "Akash",
-          last_name: "Elhance",
-          celebrity_slug: "akash-elhance",
-          description: "Desc Desc 5",
-          is_published: true,
-          created_at: "2024-06-08T12:43:08.312674Z",
-          updated_at: "2024-06-09T08:26:20.333593Z"
-        }
-      ;
+const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
+
+export default async function BiographySlugPage({params}){
+  
+  async function fetchData() {
+    const res = await fetch(`${apiUrl}/api/celebrity/biography/${params.slug}`);
+  
+    if (!res.ok) {
+      throw new Error('Failed to fetch data');
+    }
+  
+    return res.json();
+  }
+
+  const data = await fetchData()
+   
 
     return    <div className="bg-grey-100 px-6 pt-16 pb-20 flex flex-col md:flex-row">
     {/* First Section (5/6 width) */}

@@ -10,6 +10,7 @@ import SideBarComponent from "@/components/SideBarComponent";
 
 import Link from "next/link";
 
+
 export const metadata = {
     title: "Bollywood Movies Box Office Collection Update-2024",
     description: "Get the complete update on the Box Office Collection for Bollywood Movies, Latest Bollywood Movies Box Office Collection",
@@ -18,8 +19,12 @@ export const metadata = {
 
 
 
-export default function BoxOfficePage() {
+
+
+export default async function BoxOfficePage() {
+
     return <>
+
         <div className="bg-grey-100 px-6 pt-16 pb-20 flex flex-col md:flex-row">
             {/* First Section (5/6 width) */}
             <div className="w-full md:w-5/6 mb-4 md:mb-0 ">

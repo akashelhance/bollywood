@@ -1,46 +1,43 @@
 
-"use client"
-import { useState } from 'react';
+// "use client"
+// import { useState } from 'react';
 
-export default function BoxOfficeTableComponent() {
-
-  const movies = [
-    {
-      title: "kOI YO mOVIEW",
-      movie_budget: "6756.768686 million ( 675.6768686 crore) INR",
-      box_office_collection: "654657 INR",
-      verdict: "Average",
-      poster: "http://localhost:8000/movies/posters/456.png",
-      genres: "Horror"
-    },
-    {
-      title: "UIuiuiui",
-      movie_budget: "0.90 million ( 0.09 crore) INR",
-      box_office_collection: "0 INR",
-      verdict: "Block",
-      poster: "http://localhost:8000/movies/posters/456_lXvXi5f.png",
-      genres: "adventure"
-    }
-  ];
+const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
 
-  const [searchQuery, setSearchQuery] = useState('');
+async function fetchData() {
+  const res = await fetch(`${apiUrl}/api/movie/box-office`);
 
-  const filteredMovies = movies.filter((movie) =>
-    movie.title.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  if (!res.ok) {
+    throw new Error('Failed to fetch data');
+  }
+
+  return res.json();
+}
+
+export default async function BoxOfficeTableComponent() {
+
+  const filteredMovies= await fetchData()
+
+
+
+  // const [searchQuery, setSearchQuery] = useState('');
+
+  // const filteredMovies = movies.filter((movie) =>
+  //   movie.title.toLowerCase().includes(searchQuery.toLowerCase())
+  // );
 
   return (
     <div className="container mx-auto p-4">
       <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
         <h2 className="text-2xl font-bold text-gray-900 mb-2 md:mb-0">L port :</h2>
-        <input
+        {/* <input
           type="text"
           className="w-full md:w-64 p-2 border border-gray-300 rounded-lg"
           placeholder="Search for a movie..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-        />
+        /> */}
       </div>
 
       <div className="block md:hidden">

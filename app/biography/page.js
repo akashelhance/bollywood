@@ -8,7 +8,11 @@ import Link from "next/link"
 
 
 
-export default function BiographyPage() {
+
+
+export default  function BiographyPage() {
+
+  
   return <>
 
     <div className="bg-grey-100 px-6 pt-16 pb-20 flex flex-col md:flex-row">

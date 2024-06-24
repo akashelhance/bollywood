@@ -2,69 +2,24 @@ import LoadMore from "@/components/LoadMore";
 import SideBarComponent from "@/components/SideBarComponent";
 import UpcomingMovieCardComponent from "@/components/UpcomingMovieCardComponent";
 
-export default function UpcomingMoviesPage() {
+const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
-    const data = [
-        {
-            "title": "Movie 1",
-            "verdict": "Average",
-            "poster": "http://localhost:8000/movies/posters/456.png",
-            "genres": "Horror",
-            "release_date": "2024-06-17",
-            "title_slug": "koi-yo-moview",
-            "language": "Hindi",
-            "cast": [
-                {
-                    "name": "Salman khan",
-                    "celebrity_slug": "salman-khan"
-                },
 
-                {
-                    "name": "Shah Rukh Khan",
-                    "celebrity_slug": "Shah-Rukh-khan"
-                }
-            ],
-            "duration": "90 minutes",
-            "plot": "Desjndnknfjn",
-            "trailer_url": "",
-            "similar_movies": [
-                {
-                    "title": "Not reelased",
-                    "title_slug": "not-reelased"
-                },
-                {
-                    "title": "UIuiuiui",
-                    "title_slug": "uiuiuiui"
-                }
-            ],
-            "available_on": "Theater, OTT"
-        },
-        {
-            "title": "Movie 2",
-            "verdict": null,
-            "poster": "http://localhost:8000",
-            "genres": "Horror",
-            "release_date": "2024-06-19",
-            "title_slug": "not-reelased",
-            "language": "Hindi",
-            "cast": [],
-            "duration": "120 minutes",
-            "plot": "Nothing just a plot",
-            "trailer_url": "http://www.fb.com",
-            "similar_movies": [
-                {
-                    "title": "kOI YO mOVIEW",
-                    "title_slug": "koi-yo-moview"
-                },
-                {
-                    "title": "UIuiuiui",
-                    "title_slug": "uiuiuiui"
-                }
-            ],
-            "available_on": "OTT"
-        }
-    ]
+async function fetchData() {
+    const res = await fetch(`${apiUrl}/api/movie/upcoming`);
+  
+    if (!res.ok) {
+      throw new Error('Failed to fetch data');
+    }
+  
+    return res.json();
+  }
 
+export default async function UpcomingMoviesPage() {
+
+    const data= await fetchData()
+
+    
     return <div className="bg-grey-100 px-6 pt-16 pb-20 flex flex-col md:flex-row">
         {/* First Section (5/6 width) */}
         <div className="w-full md:w-5/6 mb-4 md:mb-0 ">

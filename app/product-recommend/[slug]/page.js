@@ -8,60 +8,21 @@ import SpotCelebSideBarComponent from "@/components/SpotCelebSideBarComponent"
 import TabLinkCelebComponent from "@/components/TabLinkCelebComponent"
 import Link from "next/link"
 
+const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
-export default function productRecommendSlugPage({ params }) {
+export default async function productRecommendSlugPage({ params }) {
 
-    const data =
-        {
-          "id": 1,
-          "image": "http://localhost:8000/celebrities/read-recommend-logo.png",
-          "industry": [
-            {
-              "id": 1,
-              "name": "Bollywood",
-              "name_slug": "bollywood"
-            }
-          ],
-          "roles": [
-            {
-              "id": 1,
-              "name": "ACTOR",
-              "name_slug": "actor"
-            }
-          ],
-          "products_recommended": [
-            {
-              "recommendation_reason": "Because he likes it",
-              "name": "product-1",
-              "description": "dfgtrkldskjsnksdndskbjfk",
-              "price": 450,
-              "price_currency": "USD",
-              "product_image": "http://localhost:8000",
-              "category": "Bla-bla, cata-cat",
-              "brand": "Nike",
-              "sku": "435",
-              "likes": 10,
-              "links": [
-                {
-                  "id": 1,
-                  "platform": "Amazon",
-                  "link": "http://aaharaannapoorna.com/",
-                  "product": 1
-                }
-              ]
-            }
-          ],
-          "first_name": "Akash",
-          "last_name": "Elhance",
-          "celebrity_slug": "akash-elhance",
-          "description": "Desc Desc 5",
-          "is_published": true,
-          "created_at": "2024-06-08T12:43:08.312674Z",
-          "updated_at": "2024-06-09T08:26:20.333593Z"
-        }
-      
+  async function fetchData() {
+    const res = await fetch(`${apiUrl}/api/products/celebrity/${params.slug}`);
+  
+    if (!res.ok) {
+      throw new Error('Failed to fetch data');
+    }
+  
+    return res.json();
+  }
 
-
+  const data= await fetchData()
     return <>
 
         <div className="bg-grey-100 px-6 pt-16 pb-20 flex flex-col md:flex-row">

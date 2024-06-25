@@ -3,8 +3,12 @@ export default function BoiTableComponent({data}){
  
 
     return <>
+
+{data.map((celebrity) => (
+          <h1 key={celebrity.id} className="py-2 px-4 border-b text-center text-lg">{celebrity.first_name} {celebrity.last_name} Biography</h1>
+        ))}
 <div className="overflow-x-auto">
-  <table className="min-w-full bg-white border border-gray-200">
+  <table className="min-w-full bg-white border border-gray-200 mt-12">
     <thead>
       <tr>
         <th className="py-2 px-4 text-center text-xl font-bold bg-teal-50">Attribute</th>

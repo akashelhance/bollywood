@@ -66,8 +66,7 @@ export default  function BiographyPage() {
 
        <BiographyMainComponents/>
 
-          <LoadMore />
-
+        
 
         </div>
 

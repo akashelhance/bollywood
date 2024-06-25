@@ -42,12 +42,12 @@ export default function BoxOfficeComponent() {
      <BoxOfficeTableComponent/>
 
 
-      <div className="flex items-center justify-center mb-6 pt-6">
+      {/* <div className="flex items-center justify-center mb-6 pt-6">
         <Link href="#" className="bg-gradient-to-r from-pink-500 to-orange-500 text-white shadow-lg rounded-b-lg font-bold py-2 px-4 rounded inline-flex items-center transform transition-transform duration-300 shadow-md hover:bg-purple-800 hover:scale-105">
         
           Load More
         </Link>
-      </div>
+      </div> */}
 
 
 

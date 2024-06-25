@@ -63,8 +63,7 @@ export default function CelebrityPage() {
 
           <CelebCardComponent />
 
-          <LoadMore />
-
+         
 
         </div>
 

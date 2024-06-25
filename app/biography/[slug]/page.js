@@ -31,7 +31,7 @@ export default async function BiographySlugPage({params}){
 
 
         {/* Content for the first section */}
-        <div className="max-w-8xl  p-6 shadow-xl rounded-lg bg-orange-50">
+        <div className="max-w-8xl  p-6 shadow-xl rounded-lg bg-rose-50">
     
             <CelebDescWithImageComponent data={data} />
 

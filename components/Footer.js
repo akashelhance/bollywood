@@ -42,7 +42,7 @@ const Footer = () => {
                     fontWeight="bold"
                   >
                     <tspan x={654} y={518}>
-                      Tailwindow
+                      FilmiWood
                     </tspan>
                   </text>
                 </g>
@@ -50,10 +50,9 @@ const Footer = () => {
             </svg>
           </Link>
           <p className="text-justify">
-            Tailwindow is a collection of UI Components created using Tailwind
-            CSS Framework. The UI Components gives you all of the building
-            blocks you need to build any designs without any annoying
-            opinionated styles you have to fight to override.
+          Filmiwood is a blogging website where we mainly post articles related to Bollywood and Hollywood. Filmiwood, which aims to provide information about films, web series, box office updates, celebrities and influencer biographies. We constantly updating the data and and regularly post the articles.
+
+
           </p>
         </div>
         <div className="px-4 my-4 w-full sm:w-auto">
@@ -90,7 +89,42 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-        <div className="px-4 my-4 w-full sm:w-auto">
+
+          <div className="px-4 my-4 w-full sm:w-auto">
+          <div>
+            <h2 className="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">
+              Pages:
+            </h2>
+          </div>
+          <ul className="leading-8">
+            <li>
+              <Link href="/upcoming-movies" className="hover:text-blue-400">
+                Bollywood Upcoming Movies 
+              </Link>
+            </li>
+            <li>
+              <Link href="/box-office-update-2024" className="hover:text-blue-400">
+                Box Office Update 2024
+              </Link>
+            </li>
+            <li>
+              <Link href="/biography" className="hover:text-blue-400">
+              Biography 
+              </Link>
+            </li>
+            <li>
+              <Link href="/awards" className="hover:text-blue-400">
+                Awards
+              </Link>
+            </li>
+            <li>
+              <Link href="/celebrity" className="hover:text-blue-400">
+              Celebrity
+              </Link>
+            </li>
+          </ul>
+        </div>
+        {/* <div className="px-4 my-4 w-full sm:w-auto">
           <div>
             <h2 className="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">
               Blog
@@ -123,7 +157,7 @@ const Footer = () => {
               </Link>
             </li>
           </ul>
-        </div>
+        </div> */}
         <div className="px-4 my-4 w-full sm:w-auto">
           <div>
             <h2 className="inline-block text-2xl pb-4 mb-4 border-b-4 border-blue-600">

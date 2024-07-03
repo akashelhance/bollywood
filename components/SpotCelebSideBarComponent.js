@@ -1,60 +1,53 @@
-export default function SpotCelebSideBarComponent(){
+
+const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
+
+async function fetchData() {
+  const res = await fetch(`${apiUrl}/api/spotlights?fields=celebrity`);
+
+  if (!res.ok) {
+    throw new Error('Failed to fetch data');
+  }
+
+  const final = await res.json();
+
+  return final
+}
+
+
+export default async function SpotCelebSideBarComponent(){
+  
+  const celebrities= await fetchData()
     return <>
-
-<div className="border-2 p-2 border-red-300 sm:hidden md:block mb-6">
-<h4 className="px-4 py-2 bg-rose-100 font-bold text-2xl text-center border border-4 border-orange-300 sm:hidden md:block"> Spot Light Celebs</h4>
-  <ul role="list" className="divide-y divide-gray-100">
-  <li className="flex justify-between gap-x-6 py-5">
-    <div className="flex min-w-0 gap-x-4">
-      <img
-        className="h-12 w-12 flex-none rounded-full bg-gray-50"
-        src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-        alt=""
-      />
-      <div className="min-w-0 flex-auto">
-        <p className="text-sm font-semibold leading-6 text-gray-900">
-          Leslie Alexander
-        </p>
-        <p className="mt-1 truncate text-xs leading-5 text-gray-500">
-          leslie.alexander@example.com
-        </p>
-      </div>
+ <div className="border-2 p-2 border-red-800 mb-6">
+      <h4 className="px-4 py-2 bg-rose-100 font-bold text-2xl text-center border border-4 border-rose-400">Spot Light Celebs</h4>
+      <ul role="list" className="divide-y divide-gray-100">
+        {celebrities?.celebrities?.map((item, index) => (
+          <li key={index} className="flex flex-col md:flex-row justify-between gap-x-6 py-5">
+            <div className="flex min-w-0 gap-x-4">
+              <img
+                className="h-12 w-12 flex-none rounded-full bg-gray-50"
+                src={item.celebrity[0].image}
+                alt={item.celebrity[0].name}
+              />
+              <div className="min-w-0 flex-auto">
+                <p className="text-sm font-semibold leading-6 text-gray-900">
+                  {item.celebrity[0].name}
+                </p>
+                <p className="mt-1 truncate text-xs leading-5 text-gray-500">
+                  {item.celebrity[0].roles}
+                </p>
+              </div>
+            </div>
+            <div className="hidden md:flex md:flex-col md:items-end">
+              <p className="text-sm leading-6 text-gray-900">{item.heading}</p>
+              <p className="mt-1 text-xs leading-5 text-gray-500">
+                {item.description}
+              </p>
+            </div>
+          </li>
+        ))}
+      </ul>
     </div>
-    <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-      <p className="text-sm leading-6 text-gray-900">Co-Founder / CEO</p>
-      <p className="mt-1 text-xs leading-5 text-gray-500">
-        Last seen <time dateTime="2023-01-23T13:23Z">3h ago</time>
-      </p>
-    </div>
-  </li>
-
-  <li className="flex justify-between gap-x-6 py-5">
-    <div className="flex min-w-0 gap-x-4">
-      <img
-        className="h-12 w-12 flex-none rounded-full bg-gray-50"
-        src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-        alt=""
-      />
-      <div className="min-w-0 flex-auto">
-        <p className="text-sm font-semibold leading-6 text-gray-900">
-          Tom Cook
-        </p>
-        <p className="mt-1 truncate text-xs leading-5 text-gray-500">
-          tom.cook@example.com
-        </p>
-      </div>
-    </div>
-    <div className="hidden shrink-0 sm:flex sm:flex-col sm:items-end">
-      <p className="text-sm leading-6 text-gray-900">Director of Product</p>
-      <div className="mt-1 flex items-center gap-x-1.5">
-        <div className="flex-none rounded-full bg-emerald-500/20 p-1">
-          <div className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-        </div>
-        <p className="text-xs leading-5 text-gray-500">Online</p>
-      </div>
-    </div>
-  </li>
-</ul>
-</div>
     </>
 }

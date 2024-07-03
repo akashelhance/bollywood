@@ -19,7 +19,7 @@ export default function CelebrityPage() {
 
 
         {/* Content for the first section */}
-        <div className="max-w-7xl mx-auto p-6  shadow-xl rounded-lg bg-teal-50">
+        <div className="max-w-7xl mx-auto p-6  shadow-xl rounded-lg bg-rose-50">
 
 
 
@@ -63,15 +63,7 @@ export default function CelebrityPage() {
 
           <CelebCardComponent />
 
-         
-
         </div>
-
-
-
-
-
-
 
       </div>
       {/* Second Section (1/6 width) */}

@@ -1,5 +1,6 @@
-import LoadMore from "@/components/LoadMore";
-import SideBarComponent from "@/components/SideBarComponent";
+
+import PopularPostSideBarComponent from "@/components/PopularPostSideBarComponent";
+import SpotMovieSideBarComponent from "@/components/SpotMovieSideBarComponent";
 import UpcomingMovieCardComponent from "@/components/UpcomingMovieCardComponent";
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL;
@@ -7,19 +8,19 @@ const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
 async function fetchData() {
     const res = await fetch(`${apiUrl}/api/movie/upcoming`);
-  
+
     if (!res.ok) {
-      throw new Error('Failed to fetch data');
+        throw new Error('Failed to fetch data');
     }
-  
+
     return res.json();
-  }
+}
 
 export default async function UpcomingMoviesPage() {
 
-    const data= await fetchData()
+    const data = await fetchData()
 
-    
+
     return <div className="bg-grey-100 px-6 pt-16 pb-20 flex flex-col md:flex-row">
         {/* First Section (5/6 width) */}
         <div className="w-full md:w-5/6 mb-4 md:mb-0 ">
@@ -65,24 +66,10 @@ export default async function UpcomingMoviesPage() {
 
                 </h2>
 
-               
-                    <UpcomingMovieCardComponent data={data} />
-               
 
-
-
-
-                
-
+                <UpcomingMovieCardComponent data={data} />
 
             </div>
-
-
-
-
-
-
-
 
         </div>
         {/* Second Section (1/6 width) */}
@@ -91,7 +78,11 @@ export default async function UpcomingMoviesPage() {
 
             {/* Content for the second section */}
 
-            <SideBarComponent />
+
+            <SpotMovieSideBarComponent />
+
+            <PopularPostSideBarComponent/>
+
 
 
         </div>

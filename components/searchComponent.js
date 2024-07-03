@@ -19,7 +19,7 @@ const SearchPage = () => {
 
   return (
     <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Search Results for "{query}"</h1>
+      <h1 className="text-2xl font-bold mb-4">Search Results for &quot;{query}&quot;</h1>
       {results.length > 0 ? (
         <ul>
           {results.map((result, index) => (

@@ -2,10 +2,10 @@ export default function PopularPostSideBarComponent(){
     return <>
 
 <div className="overflow-x-auto">
-    <table className="w-full table-auto  border-2 border-orange-300 p-4">
+    <table className="w-full table-auto  border-2 border-rose-800 p-4">
       <thead>
         <tr>
-          <th className="px-4 py-2 bg-rose-100 font-bold text-2xl">POPULAR POSTS</th>
+          <th className="px-4 py-2 bg-rose-300 font-bold text-2xl">POPULAR POSTS</th>
         </tr>
       </thead>
       <tbody>

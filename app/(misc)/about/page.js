@@ -8,17 +8,9 @@ export default function About(){
             {/* First Section (5/6 width) */}
             <div className="w-full md:w-5/6 mb-4 md:mb-0 ">
 
-
-
-           
-
-
                
           <AboutComponents/>
                
-
-
-
             </div>
             {/* Second Section (1/6 width) */}
             <div className="w-full md:w-1/6 sm:container">

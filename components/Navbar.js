@@ -50,11 +50,11 @@ const Navbar = () => {
           <ul className="flex flex-col lg:flex-row lg:space-x-8 lg:items-center">
             <NavItem href="/" selected={selected} onItemClick={handleItemClick}>Home</NavItem>
             <NavItem href="/upcoming-movies" selected={selected} onItemClick={handleItemClick}>Upcoming Movies</NavItem>
-            {/* <NavItem href="/upcoming-web-series" selected={selected} onItemClick={handleItemClick}>Upcoming Web Series</NavItem> */}
+            <NavItem href="/upcoming-web-series" selected={selected} onItemClick={handleItemClick}>Upcoming Web Series</NavItem>
 
             <NavItem href="/box-office-update-2024" selected={selected} onItemClick={handleItemClick}>Box Office</NavItem>
-            <NavItem href="/biography" selected={selected} onItemClick={handleItemClick}>Biography</NavItem>
-            <NavItem href="/awards" selected={selected} onItemClick={handleItemClick}>Awards</NavItem>
+            {/* <NavItem href="/biography" selected={selected} onItemClick={handleItemClick}>Biography</NavItem> */}
+            {/* <NavItem href="/awards" selected={selected} onItemClick={handleItemClick}>Awards</NavItem> */}
             <NavItem href="/celebrity" selected={selected} onItemClick={handleItemClick}>Celebrity</NavItem>
           </ul>
         </div>

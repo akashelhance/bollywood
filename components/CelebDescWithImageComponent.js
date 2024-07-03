@@ -23,7 +23,7 @@ export default function CelebDescWithImageComponent({ data }) {
   return <>
 
 <div className="container mx-auto pb-4">
-  <div className="w-full flex flex-col md:flex-row items-center border rounded-lg shadow-md hover:shadow-lg transition duration-300">
+  <div className="w-full flex flex-col md:flex-row items-center border border-4 border-rose-800 rounded-lg shadow-md hover:shadow-lg transition duration-300">
     <div className="w-full md:w-64 h-96 mb-4 md:mb-0">
       <img
         src={data.image}
@@ -32,7 +32,7 @@ export default function CelebDescWithImageComponent({ data }) {
       />
     </div>
     <div className="text-left flex-1">
-      <h1 className="text-4xl font-bold text-center md:text-left px-8 pt-6 mb-2 text-gray-900 pb-4">
+      <h1 className="text-2xl font-bold text-center md:text-left px-8 pt-6 mb-2 text-gray-900 pb-4">
         {data.first_name} {data.last_name}
       </h1>
       <div className="flex flex-col md:flex-row mb-4 px-8">
@@ -69,7 +69,7 @@ export default function CelebDescWithImageComponent({ data }) {
           </span>
         </div>
       </div>
-      <p className="text-xl text-gray-900 mb-6 px-8">
+      <p className="text-lg text-grey-900 mb-6 px-8">
         {description}
       </p>
     </div>

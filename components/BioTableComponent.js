@@ -1,158 +1,220 @@
-export default function BoiTableComponent({data}){
+import Link from "next/link"
+import Image from "next/image"
 
- 
+export default function BoiTableComponent({data}){
 
     return <>
 
 {data.map((celebrity) => (
           <h1 key={celebrity.id} className="py-2 px-4 border-b text-center text-lg">{celebrity.first_name} {celebrity.last_name} Biography</h1>
         ))}
+
+
 <div className="overflow-x-auto">
-  <table className="min-w-full bg-white border border-gray-200 mt-12">
+  <table className="min-w-full bg-white border-4 border-rose-800 mt-12">
     <thead>
       <tr>
-        <th className="py-2 px-4 text-center text-xl font-bold bg-teal-50">Attribute</th>
+        <th className="py-3 px-4 text-center text-xl font-bold bg-indigo-100 border-b border-rose-600">Attribute</th>
         {data.map((celebrity) => (
-          <th key={celebrity.id} className="py-2 px-4 text-center text-xl font-bold bg-teal-50">{celebrity.first_name} {celebrity.last_name} Biography</th>
+          <th key={celebrity.id} className="py-3 px-4 text-center text-xl font-bold bg-indigo-100 border-b border-rose-600">{celebrity.first_name} {celebrity.last_name} Biography</th>
         ))}
       </tr>
     </thead>
     <tbody>
       <tr className="hover:bg-gray-100 even:bg-gray-50">
-        <td className="py-2 px-4 border-b text-center text-lg font-bold">First Name</td>
+        <td className="py-3 px-4 border-b border-rose-300 text-center text-lg font-bold">First Name</td>
         {data.map((celebrity) => (
-          <td key={celebrity.id} className="py-2 px-4 border-b text-center text-lg">{celebrity.first_name}</td>
+          <td key={celebrity.id} className="py-3 px-4 border-b border-rose-300 text-center text-lg">{celebrity.first_name || 'NaN'}</td>
         ))}
       </tr>
       <tr className="hover:bg-gray-100 even:bg-gray-50">
-        <td className="py-2 px-4 border-b text-center text-lg font-bold">Last Name</td>
+        <td className="py-3 px-4 border-b border-rose-300 text-center text-lg font-bold">Last Name</td>
         {data.map((celebrity) => (
-          <td key={celebrity.id} className="py-2 px-4 border-b text-center text-lg">{celebrity.last_name}</td>
+          <td key={celebrity.id} className="py-3 px-4 border-b border-rose-300 text-center text-lg">{celebrity.last_name || 'NaN'}</td>
         ))}
       </tr>
       <tr className="hover:bg-gray-100 even:bg-gray-50">
-        <td className="py-2 px-4 border-b text-center text-lg font-bold">Industry</td>
+        <td className="py-3 px-4 border-b border-rose-300 text-center text-lg font-bold">Industry</td>
         {data.map((celebrity) => (
-          <td key={celebrity.id} className="py-2 px-4 border-b text-center text-lg">{celebrity.industry.map(ind => ind.name).join(', ')}</td>
+          <td key={celebrity.id} className="py-3 px-4 border-b border-rose-300 text-center text-lg">{celebrity.industry ? celebrity.industry.map(ind => ind.name).join(', ') : 'NaN'}</td>
         ))}
       </tr>
       <tr className="hover:bg-gray-100 even:bg-gray-50">
-        <td className="py-2 px-4 border-b text-center text-lg font-bold">Role</td>
+        <td className="py-3 px-4 border-b border-rose-300 text-center text-lg font-bold">Role</td>
         {data.map((celebrity) => (
-          <td key={celebrity.id} className="py-2 px-4 border-b text-center text-lg">{celebrity.roles.map(role => role.name).join(', ')}</td>
+          <td key={celebrity.id} className="py-3 px-4 border-b border-rose-300 text-center text-lg">{celebrity.roles ? celebrity.roles.map(role => role.name).join(', ') : 'NaN'}</td>
         ))}
       </tr>
       <tr className="hover:bg-gray-100 even:bg-gray-50">
-        <td className="py-2 px-4 border-b text-center text-lg font-bold">Nickname</td>
+        <td className="py-3 px-4 border-b border-rose-300 text-center text-lg font-bold">Nickname</td>
         {data.map((celebrity) => (
-          <td key={celebrity.id} className="py-2 px-4 border-b text-center text-lg">{celebrity.biography.nickname}</td>
+          <td key={celebrity.id} className="py-3 px-4 border-b border-rose-300 text-center text-lg">{celebrity.biography.nickname || 'NaN'}</td>
         ))}
       </tr>
       <tr className="hover:bg-gray-100 even:bg-gray-50">
-        <td className="py-2 px-4 border-b text-center text-lg font-bold">Date of Birth</td>
+        <td className="py-3 px-4 border-b border-rose-300 text-center text-lg font-bold">Date of Birth</td>
         {data.map((celebrity) => (
-          <td key={celebrity.id} className="py-2 px-4 border-b text-center text-lg">{celebrity.biography.date_of_birth}</td>
+          <td key={celebrity.id} className="py-3 px-4 border-b border-rose-300 text-center text-lg">{celebrity.biography.date_of_birth || 'NaN'}</td>
         ))}
       </tr>
       <tr className="hover:bg-gray-100 even:bg-gray-50">
-        <td className="py-2 px-4 border-b text-center text-lg font-bold">BirthPlace</td>
+        <td className="py-3 px-4 border-b border-rose-300 text-center text-lg font-bold">BirthPlace</td>
         {data.map((celebrity) => (
-          <td key={celebrity.id} className="py-2 px-4 border-b text-center text-lg">{celebrity.biography.birthplace}</td>
+          <td key={celebrity.id} className="py-3 px-4 border-b border-rose-300 text-center text-lg">{celebrity.biography.birthplace || 'NaN'}</td>
         ))}
       </tr>
       <tr className="hover:bg-gray-100 even:bg-gray-50">
-        <td className="py-2 px-4 border-b text-center text-lg font-bold">School</td>
+        <td className="py-3 px-4 border-b border-rose-300 text-center text-lg font-bold">School</td>
         {data.map((celebrity) => (
-          <td key={celebrity.id} className="py-2 px-4 border-b text-center text-lg">{celebrity.biography.school}</td>
+          <td key={celebrity.id} className="py-3 px-4 border-b border-rose-300 text-center text-lg">{celebrity.biography.school || 'NaN'}</td>
         ))}
       </tr>
       <tr className="hover:bg-gray-100 even:bg-gray-50">
-        <td className="py-2 px-4 border-b text-center text-lg font-bold">College</td>
+        <td className="py-3 px-4 border-b border-rose-300 text-center text-lg font-bold">College</td>
         {data.map((celebrity) => (
-          <td key={celebrity.id} className="py-2 px-4 border-b text-center text-lg">{celebrity.biography.college}</td>
+          <td key={celebrity.id} className="py-3 px-4 border-b border-rose-300 text-center text-lg">{celebrity.biography.college || 'NaN'}</td>
         ))}
       </tr>
       <tr className="hover:bg-gray-100 even:bg-gray-50">
-        <td className="py-2 px-4 border-b text-center text-lg font-bold">Education Qualification</td>
+        <td className="py-3 px-4 border-b border-rose-300 text-center text-lg font-bold">Education Qualification</td>
         {data.map((celebrity) => (
-          <td key={celebrity.id} className="py-2 px-4 border-b text-center text-lg">{celebrity.biography.education_qualification}</td>
+          <td key={celebrity.id} className="py-3 px-4 border-b border-rose-300 text-center text-lg">{celebrity.biography.education_qualification || 'NaN'}</td>
         ))}
       </tr>
       <tr className="hover:bg-gray-100 even:bg-gray-50">
-        <td className="py-2 px-4 border-b text-center text-lg font-bold">Ethnicity</td>
+        <td className="py-3 px-4 border-b border-rose-300 text-center text-lg font-bold">Ethnicity</td>
         {data.map((celebrity) => (
-          <td key={celebrity.id} className="py-2 px-4 border-b text-center text-lg">{celebrity.biography.ethnicity}</td>
+          <td key={celebrity.id} className="py-3 px-4 border-b border-rose-300 text-center text-lg">{celebrity.biography.ethnicity || 'NaN'}</td>
         ))}
       </tr>
       <tr className="hover:bg-gray-100 even:bg-gray-50">
-        <td className="py-2 px-4 border-b text-center text-lg font-bold">Net Worth</td>
+        <td className="py-3 px-4 border-b border-rose-300 text-center text-lg font-bold">Net Worth</td>
         {data.map((celebrity) => (
-          <td key={celebrity.id} className="py-2 px-4 border-b text-center text-lg">{celebrity.biography.net_worth} {celebrity.biography.net_worth_currency}</td>
+          <td key={celebrity.id} className="py-3 px-4 border-b border-rose-300 text-center text-lg">{celebrity.biography.net_worth ? `${celebrity.biography.net_worth} ${celebrity.biography.net_worth_currency}` : 'NaN'}</td>
         ))}
       </tr>
       <tr className="hover:bg-gray-100 even:bg-gray-50">
-        <td className="py-2 px-4 border-b text-center text-lg font-bold">Nationality</td>
+        <td className="py-3 px-4 border-b border-rose-300 text-center text-lg font-bold">Nationality</td>
         {data.map((celebrity) => (
-          <td key={celebrity.id} className="py-2 px-4 border-b text-center text-lg">{celebrity.biography.nationality}</td>
+          <td key={celebrity.id} className="py-3 px-4 border-b border-rose-300 text-center text-lg">{celebrity.biography.nationality || 'NaN'}</td>
         ))}
       </tr>
       <tr className="hover:bg-gray-100 even:bg-gray-50">
-        <td className="py-2 px-4 border-b text-center text-lg font-bold">Height</td>
+        <td className="py-3 px-4 border-b border-rose-300 text-center text-lg font-bold">Height</td>
         {data.map((celebrity) => (
-          <td key={celebrity.id} className="py-2 px-4 border-b text-center text-lg">{celebrity.biography.height}</td>
+          <td key={celebrity.id} className="py-3 px-4 border-b border-rose-300 text-center text-lg">{celebrity.biography.height || 'NaN'}</td>
         ))}
       </tr>
       <tr className="hover:bg-gray-100 even:bg-gray-50">
-        <td className="py-2 px-4 border-b text-center text-lg font-bold">Eye Color</td>
+        <td className="py-3 px-4 border-b border-rose-300 text-center text-lg font-bold">Eye Color</td>
         {data.map((celebrity) => (
-          <td key={celebrity.id} className="py-2 px-4 border-b text-center text-lg">{celebrity.biography.eye_color}</td>
+          <td key={celebrity.id} className="py-3 px-4 border-b border-rose-300 text-center text-lg">{celebrity.biography.eye_color || 'NaN'}</td>
         ))}
       </tr>
       <tr className="hover:bg-gray-100 even:bg-gray-50">
-        <td className="py-2 px-4 border-b text-center text-lg font-bold">Hair Color</td>
+        <td className="py-3 px-4 border-b border-rose-300 text-center text-lg font-bold">Hair Color</td>
         {data.map((celebrity) => (
-          <td key={celebrity.id} className="py-2 px-4 border-b text-center text-lg">{celebrity.biography.hair_color}</td>
+          <td key={celebrity.id} className="py-3 px-4 border-b border-rose-300 text-center text-lg">{celebrity.biography.hair_color || 'NaN'}</td>
         ))}
       </tr>
       <tr className="hover:bg-gray-100 even:bg-gray-50">
-        <td className="py-2 px-4 border-b text-center text-lg font-bold">Favorite Food</td>
+        <td className="py-3 px-4 border-b border-rose-300 text-center text-lg font-bold">Favorite Food</td>
         {data.map((celebrity) => (
-          <td key={celebrity.id} className="py-2 px-4 border-b text-center text-lg">{celebrity.biography.favorite_food}</td>
+          <td key={celebrity.id} className="py-3 px-4 border-b border-rose-300 text-center text-lg">{celebrity.biography.favorite_food || 'NaN'}</td>
         ))}
       </tr>
       <tr className="hover:bg-gray-100 even:bg-gray-50">
-        <td className="py-2 px-4 border-b text-center text-lg font-bold">Instagram Followers</td>
+        <td className="py-3 px-4 border-b border-rose-300 text-center text-lg font-bold">Instagram Followers</td>
         {data.map((celebrity) => (
-          <td key={celebrity.id} className="py-2 px-4 border-b text-center text-lg">{celebrity.biography.instagram_followers}</td>
-        ))}
-      </tr>
-      <tr className="hover:bg-gray-100 even:bg-gray-50">
-        <td className="py-2 px-4 border-b text-center text-lg font-bold">Instagram</td>
-        {data.map((celebrity) => (
-          <td key={celebrity.id} className="py-2 px-4 border-b text-center text-lg">{celebrity.biography.instagram ? <a href={celebrity.biography.instagram} className="text-blue-500">Profile</a> : 'N/A'}</td>
-        ))}
-      </tr>
-      <tr className="hover:bg-gray-100 even:bg-gray-50">
-        <td className="py-2 px-4 border-b text-center text-lg font-bold">Twitter</td>
-        {data.map((celebrity) => (
-          <td key={celebrity.id} className="py-2 px-4 border-b text-center text-lg">{celebrity.biography.twitter ? <a href={celebrity.biography.twitter} className="text-blue-500">Profile</a> : 'N/A'}</td>
-        ))}
-      </tr>
-      <tr className="hover:bg-gray-100 even:bg-gray-50">
-        <td className="py-2 px-4 border-b text-center text-lg font-bold">Facebook</td>
-        {data.map((celebrity) => (
-          <td key={celebrity.id} className="py-2 px-4 border-b text-center text-lg">{celebrity.biography.facebook ? <a href={celebrity.biography.facebook} className="text-blue-500">Profile</a> : 'N/A'}</td>
-        ))}
-      </tr>
-      <tr className="hover:bg-gray-100 even:bg-gray-50">
-        <td className="py-2 px-4 border-b text-center text-lg font-bold">YouTube</td>
-        {data.map((celebrity) => (
-          <td key={celebrity.id} className="py-2 px-4 border-b text-center text-lg">{celebrity.biography.youtube ? <a href={celebrity.biography.youtube} className="text-blue-500">Channel</a> : 'N/A'}</td>
+          <td key={celebrity.id} className="py-3 px-4 border-b border-rose-300 text-center text-lg">{celebrity.biography.instagram_followers || 'NaN'}</td>
         ))}
       </tr>
     </tbody>
   </table>
 </div>
+
+
+
+{data.map((celebrity) => (
+          <h2 key={celebrity.id} className="py-2 px-4 border-b text-center text-lg">{celebrity.first_name} {celebrity.last_name} SOCIAL MEDIA ACCOUNTS
+</h2>
+        ))}
+
+<div className="overflow-x-auto">
+  <div className="hidden md:block">
+    <table className="min-w-full bg-white border-4 border-rose-800 mt-12">
+      <thead>
+        <tr>
+          <th className="py-2 px-4 text-center text-xl font-bold bg-indigo-100">Celeb Name</th>
+          <th className="py-2 px-4 text-center text-xl font-bold bg-indigo-100">Instagram</th>
+          <th className="py-2 px-4 text-center text-xl font-bold bg-indigo-100">Twitter</th>
+          <th className="py-2 px-4 text-center text-xl font-bold bg-indigo-100">Facebook</th>
+          <th className="py-2 px-4 text-center text-xl font-bold bg-indigo-100">YouTube</th>
+        </tr>
+      </thead>
+      <tbody>
+        {data.map((celebrity) => (
+          <tr key={celebrity.id} className="hover:bg-gray-100 even:bg-gray-50">
+            <td className="py-2 px-4 border-b text-center text-lg font-bold">
+              {celebrity.first_name} {celebrity.last_name}
+            </td>
+            <td className="py-2 px-4 border-b text-center text-lg">
+              {celebrity.biography.instagram ? (
+                <Link href={celebrity.biography.instagram} className="text-blue-500">Profile</Link>
+              ) : 'NaN'}
+            </td>
+            <td className="py-2 px-4 border-b text-center text-lg">
+              {celebrity.biography.twitter ? (
+                <Link href={celebrity.biography.twitter} className="text-blue-500">Profile</Link>
+              ) : 'NaN'}
+            </td>
+            <td className="py-2 px-4 border-b text-center text-lg">
+              {celebrity.biography.facebook ? (
+                <Link href={celebrity.biography.facebook} className="text-blue-500">Profile</Link>
+              ) : 'NaN'}
+            </td>
+            <td className="py-2 px-4 border-b text-center text-lg">
+              {celebrity.biography.youtube ? (
+                <Link href={celebrity.biography.youtube} className="text-blue-500">Channel</Link>
+              ) : 'NaN'}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+
+  <div className="md:hidden">
+    {data.map((celebrity) => (
+      <div key={celebrity.id} className="border border-gray-200 bg-white mb-4">
+        <div className="bg-indigo-100 py-2 px-4 text-center text-xl font-bold">
+          {celebrity.first_name} {celebrity.last_name}
+        </div>
+        <div className="py-2 px-4 border-b text-lg">
+          <span className="font-bold">Instagram:</span> {celebrity.biography.instagram ? (
+            <a href={celebrity.biography.instagram} className="text-blue-500">Profile</a>
+          ) : 'NaN'}
+        </div>
+        <div className="py-2 px-4 border-b text-lg">
+          <span className="font-bold">Twitter:</span> {celebrity.biography.twitter ? (
+            <a href={celebrity.biography.twitter} className="text-blue-500">Profile</a>
+          ) : 'NaN'}
+        </div>
+        <div className="py-2 px-4 border-b text-lg">
+          <span className="font-bold">Facebook:</span> {celebrity.biography.facebook ? (
+            <a href={celebrity.biography.facebook} className="text-blue-500">Profile</a>
+          ) : 'NaN'}
+        </div>
+        <div className="py-2 px-4 border-b text-lg">
+          <span className="font-bold">YouTube:</span> {celebrity.biography.youtube ? (
+            <a href={celebrity.biography.youtube} className="text-blue-500">Channel</a>
+          ) : 'NaN'}
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
 
 
 

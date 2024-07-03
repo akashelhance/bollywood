@@ -35,10 +35,24 @@ export default function AboutComponents(){
 
 
 <p className="text-xl text-gray-900 mb-6">
-  frequently use their prominenw attention to important social problems and enhance society. Hollywood celebrities as well as South Indian (Tamil, Telugu, Kannada, and Malayalam) and Bollywood industry celebrities are included here, providing the most recent stuff. Check out this website for the birthdays of your favourite South Indian, Hollywood, and Bollywood celebrities.
+
+Filmiwood is a blogging website where we mainly post articles related to Bollywood and Hollywood. Filmiwood, which aims to provide information about films, web series, box office updates, celebrities and influencer biographies. We constantly updating the data and and regularly post the articles.
+
 </p>
 
+<p className="text-xl text-gray-900 mb-6">
 
+
+We want to become one full complete solution to get all the information about movies and web series.
+We always try to provide the accurate information and data and post genuine articles. 
+
+But if you think whatever the data we have provided or written the article is not correct. 
+
+Please drop a <Link href="mailto:filmiwood616@gmail.com" className="text-rose-800"> mail </Link>
+ or <Link href="/contact" className="text-rose-800">Contact Us </Link>
+
+
+</p>
 
 
 </div>

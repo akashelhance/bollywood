@@ -35,7 +35,7 @@ export default function SingleCelebPage({ params }) {
 
           <CelebCardComponent />
 
-          <LoadMore />
+          {/* <LoadMore /> */}
 
 
         </div>

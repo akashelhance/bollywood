@@ -37,16 +37,15 @@ export default async function BiographyMainComponents() {
     return <>
         <div className="pt-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                {/* Map over the celebrities array */}
                 {celebrities.map((celebrity) => (
                     <div key={celebrity.id} className="bg-white rounded-lg shadow-lg flex flex-col sm:flex-row max-w-4xl mb-4">
                         {/* Image Section */}
-                        <div className="w-full sm:w-1/3">
+                        <div className="w-full sm:w-1/3 flex-shrink-0">
                             <Link href={`/celebrity/${celebrity.celebrity_slug}`}>
                                 <img
                                     src={celebrity.image || 'https://via.placeholder.com/300'}
                                     alt={`${celebrity.first_name} ${celebrity.last_name}`}
-                                    className="object-cover w-full h-auto rounded-t-lg sm:rounded-l-lg sm:rounded-t-none"
+                                    className="object-cover w-full h-48 sm:h-64 md:h-72 lg:h-80 rounded-t-lg sm:rounded-l-lg sm:rounded-t-none"
                                 />
                             </Link>
                         </div>
@@ -58,31 +57,34 @@ export default async function BiographyMainComponents() {
                                 </h2>
                             </Link>
                             <p className="text-gray-900 mb-4">
-                                {celebrity.description.length > 325
-                                    ? (
-                                        <>
-                                            {truncateText(celebrity.description, 325)}
-                                            <Link href={`/biography/${celebrity.celebrity_slug}`} className="text-rose-500 hover:underline">
-                                                Read more
-                                            </Link>
-                                        </>
-                                    )
-                                    : celebrity.description
-                                }
+                                {celebrity.description.length > 325 ? (
+                                    <>
+                                        {truncateText(celebrity.description, 325)}
+                                        <Link href={`/biography/${celebrity.celebrity_slug}`} className="text-rose-500 hover:underline">
+                                            Read more
+                                        </Link>
+                                    </>
+                                ) : (
+                                    celebrity.description
+                                )}
                             </p>
                             <div className="flex flex-row gap-4">
+
                                 <Link href={`/biography/${celebrity.celebrity_slug}`} className="text-lg text-rose-500 hover:underline hover:text-rose-700">
                                     Biography
                                 </Link>
-                                <Link href={`/upcoming-movies/${celebrity.celebrity_slug}`} className="text-rose-500 text-lg hover:underline hover:text-rose-700">
-                                    Upcoming Movie
-                                </Link>
+                                {celebrity.upcoming_movies_count > 0 && (
+                                    <Link href={`/upcoming-movies/${celebrity.celebrity_slug}`} className="text-rose-500 text-lg hover:underline hover:text-rose-700">
+                                        Upcoming Movies
+                                    </Link>
+                                )}
                             </div>
                         </div>
                     </div>
                 ))}
             </div>
         </div>
+
 
     </>
 }

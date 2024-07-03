@@ -3,10 +3,12 @@
 
 
 import BoxOfficeComponent from "@/components/BoxOfficeComponent";
+import PopularPostSideBarComponent from "@/components/PopularPostSideBarComponent";
 
 
 import RelatedArticleComponent from "@/components/RelatedArticleComponent";
-import SideBarComponent from "@/components/SideBarComponent";
+
+import SpotMovieSideBarComponent from "@/components/SpotMovieSideBarComponent";
 
 import Link from "next/link";
 
@@ -49,7 +51,8 @@ export default async function BoxOfficePage() {
 
                 {/* Content for the second section */}
 
-             <SideBarComponent/>
+            <SpotMovieSideBarComponent/>
+                    <PopularPostSideBarComponent/>
 
 
             </div>

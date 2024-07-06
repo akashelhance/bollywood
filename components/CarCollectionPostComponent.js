@@ -1,5 +1,5 @@
 import Link from "next/link"
-
+import Image from "next/image"
 
 export default function CarCollectionPostComponent(){
     return <>
@@ -22,7 +22,9 @@ export default function CarCollectionPostComponent(){
      
 
             <div className="max-w-screen-lg mx-auto p-4">
-  <img
+  <Image
+   width={100}
+   height={100}
     src="https://source.unsplash.com/random/1200x800"
     alt="Featured Image"
     className="w-full h-auto shadow-lg rounded-md"
@@ -72,7 +74,7 @@ export default function CarCollectionPostComponent(){
             </p>
 
             <div className="max-w-screen-md mx-auto p-4">
-  <img
+  <Image
     src="https://source.unsplash.com/random/800x600?sig=1"
     alt="Blog Image 1"
     className="w-full h-auto shadow-md rounded-md mb-4"

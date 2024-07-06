@@ -4,9 +4,9 @@ import BiographyMainComponents from "@/components/BiographyMainComponents"
 import PopularPostSideBarComponent from "@/components/PopularPostSideBarComponent"
 import SpotCelebSideBarComponent from "@/components/SpotCelebSideBarComponent"
 import Link from "next/link"
+import Image from "next/image"
 
 export default function BiographyPage() {
-
 
   return <>
 
@@ -30,7 +30,7 @@ export default function BiographyPage() {
 
           <div className="flex items-center mb-4">
             <Link href="/author">
-              <img
+              <Image
                 src="https://via.placeholder.com/40"
                 alt="Author Image"
                 className="w-10 h-10 rounded-full mr-4"

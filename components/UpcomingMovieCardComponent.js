@@ -44,10 +44,11 @@ export default function UpcomingMovieCardComponent({ data }) {
               <div className="flex flex-wrap p-6">
                 <div className="w-full md:w-1/3 pt-12 sm:pt-2">
                   <Image
+                   width={100}
+                   height={100}
                     src={movie.poster}
                     alt="Movie Image"
-                    width={100}
-                    height={100}
+                   
                     className="w-full h-auto object-cover transition duration-500 ease-in-out"
                   />
                 </div>

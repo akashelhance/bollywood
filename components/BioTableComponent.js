@@ -192,22 +192,22 @@ export default function BoiTableComponent({data}){
         </div>
         <div className="py-2 px-4 border-b text-lg">
           <span className="font-bold">Instagram:</span> {celebrity.biography.instagram ? (
-            <a href={celebrity.biography.instagram} className="text-blue-500">Profile</a>
+            <Link href={celebrity.biography.instagram} className="text-blue-500">Profile</Link>
           ) : 'NaN'}
         </div>
         <div className="py-2 px-4 border-b text-lg">
           <span className="font-bold">Twitter:</span> {celebrity.biography.twitter ? (
-            <a href={celebrity.biography.twitter} className="text-blue-500">Profile</a>
+            <Link href={celebrity.biography.twitter} className="text-blue-500">Profile</Link>
           ) : 'NaN'}
         </div>
         <div className="py-2 px-4 border-b text-lg">
           <span className="font-bold">Facebook:</span> {celebrity.biography.facebook ? (
-            <a href={celebrity.biography.facebook} className="text-blue-500">Profile</a>
+            <Link href={celebrity.biography.facebook} className="text-blue-500">Profile</Link>
           ) : 'NaN'}
         </div>
         <div className="py-2 px-4 border-b text-lg">
           <span className="font-bold">YouTube:</span> {celebrity.biography.youtube ? (
-            <a href={celebrity.biography.youtube} className="text-blue-500">Channel</a>
+            <Link href={celebrity.biography.youtube} className="text-blue-500">Channel</Link>
           ) : 'NaN'}
         </div>
       </div>

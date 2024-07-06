@@ -2,10 +2,16 @@
 
 
 import CelebCardComponent from "@/components/CelebCardComponent"
-import LoadMore from "@/components/LoadMore"
 import PopularPostSideBarComponent from "@/components/PopularPostSideBarComponent"
 import SpotCelebSideBarComponent from "@/components/SpotCelebSideBarComponent"
 import Link from "next/link"
+import Image from "next/image"
+
+export const metadata = {
+  title: "Bollywood Movies Box Office Collection Update-2024",
+  description: "Get the complete update on the Box Office Collection for Bollywood Movies, Latest Bollywood Movies Box Office Collection",
+  keyword: "rentals, find rental homes"
+};
 
 
 
@@ -34,7 +40,9 @@ export default function CelebrityPage() {
 
           <div className="flex items-center mb-4">
             <Link href="/author">
-              <img
+              <Image
+              width={100}
+              height={100}
                 src="https://via.placeholder.com/40"
                 alt="Author Image"
                 className="w-10 h-10 rounded-full mr-4"
@@ -59,7 +67,6 @@ export default function CelebrityPage() {
           <h2 className="text-xl font-bold mb-2 text-gray-900"> Box Office Report :
 
           </h2>
-
 
           <CelebCardComponent />
 

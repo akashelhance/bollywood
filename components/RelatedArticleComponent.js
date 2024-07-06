@@ -1,5 +1,6 @@
 
 import Link from "next/link"
+import Image from "next/image"
 
 
 export default function RelatedArticleComponent() {
@@ -18,7 +19,9 @@ export default function RelatedArticleComponent() {
                 <div className="mt-10 grid grid-cols-1 gap-y-12 gap-x-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
                     {/* Related Article Card (Replace with dynamic content) */}
                     <div className="bg-white overflow-hidden shadow rounded-lg">
-                        <img
+                        <Image
+                         width={100}
+                         height={100}
                             src="https://via.placeholder.com/150"
                             alt="Article Image"
                             className="object-cover w-full h-40 sm:h-48"

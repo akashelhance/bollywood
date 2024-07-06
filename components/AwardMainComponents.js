@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 const awards = [
     {
@@ -51,7 +52,9 @@ const AwardMainComponents = () => {
                         {/* Image Section */}
                         <div className="w-full sm:w-1/3">
                             <Link href={`/award/${award.name_slug}`}>
-                                <img
+                                <Image
+                                 width={100}
+                                 height={100}
                                     src={award.image || 'https://via.placeholder.com/300'}
                                     alt={award.name}
                                     className="object-cover w-full h-auto rounded-t-lg sm:rounded-l-lg sm:rounded-t-none"

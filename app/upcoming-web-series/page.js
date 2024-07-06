@@ -2,6 +2,7 @@
 import PopularPostSideBarComponent from "@/components/PopularPostSideBarComponent";
 import SpotSeriesSideBarComponent from "@/components/SpotSeriesSideBarComponent";
 import UpcomingWebSeriesComponent from "@/components/UpcomingWebSeriesComponent";
+import Image from "next/image";
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
@@ -46,7 +47,9 @@ export default async function UpComingWebSeriesPage() {
 
 
                     <div className="flex items-center mb-4">
-                        <img
+                        <Image
+                         width={100}
+                         height={100}
                             src="https://via.placeholder.com/40"
                             alt="Author Image"
                             className="w-10 h-10 rounded-full mr-4"

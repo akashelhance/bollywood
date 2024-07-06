@@ -17,9 +17,6 @@ export default function CarCollectionPage({ params }) {
             <div className="w-full md:w-5/6 mb-4 md:mb-0 ">
 
 
-
-
-
                 {/* Content for the first section */}
                 <div className="max-w-8xl  p-6 shadow-xl rounded-lg bg-orange-50">
 

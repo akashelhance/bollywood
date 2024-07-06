@@ -1,3 +1,5 @@
+import Link from "next/link"
+
 export default function PopularPostSideBarComponent(){
     return <>
 
@@ -11,32 +13,32 @@ export default function PopularPostSideBarComponent(){
       <tbody>
         <tr className="border border-gray-300">
           <td className="px-4 py-2">
-            <a href="#" className="text-rose-500 hover:underline hover:text-rose-700 text-normal">Hot Movie On Netflix</a>
+            <Link href="#" className="text-rose-500 hover:underline hover:text-rose-700 text-normal">Hot Movie On Netflix</Link>
           </td>
         </tr>
         <tr className="border border-gray-300">
           <td className="px-4 py-2">
-            <a href="#" className="text-rose-500 hover:underline hover:text-rose-700 text-normal">Hot Movie On Netflix</a>
+            <Link href="#" className="text-rose-500 hover:underline hover:text-rose-700 text-normal">Hot Movie On Netflix</Link>
           </td>
         </tr>
         <tr className="border border-gray-300">
           <td className="px-4 py-2">
-            <a href="#" className="text-rose-500 hover:underline hover:text-rose-700 text-normal">Hot Movie On Netflix</a>
+            <Link href="#" className="text-rose-500 hover:underline hover:text-rose-700 text-normal">Hot Movie On Netflix</Link>
           </td>
         </tr>
         <tr className="border border-gray-300">
           <td className="px-4 py-2">
-            <a href="#" className="text-rose-500 hover:underline hover:text-rose-700 text-normal">Hot Movie On Netflix</a>
+            <Link href="#" className="text-rose-500 hover:underline hover:text-rose-700 text-normal">Hot Movie On Netflix</Link>
           </td>
         </tr>
         <tr className="border border-gray-300">
           <td className="px-4 py-2">
-            <a href="#" className="text-rose-500 hover:underline hover:text-rose-700 text-normal">Hot Movie On Netflix</a>
+            <Link href="#" className="text-rose-500 hover:underline hover:text-rose-700 text-normal">Hot Movie On Netflix</Link>
           </td>
         </tr>
         <tr className="border border-gray-300">
           <td className="px-4 py-2">
-            <a href="#" className="text-rose-500 hover:underline hover:text-rose-700 text-normal">Hot Movie On Netflix</a>
+            <Link href="#" className="text-rose-500 hover:underline hover:text-rose-700 text-normal">Hot Movie On Netflix</Link>
           </td>
         </tr>
       </tbody>

@@ -1,5 +1,5 @@
 import Link from "next/link"
-
+import Image from "next/image";
 const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
 
@@ -43,7 +43,9 @@ const celebrities= await fetchData()
      {/* Image Section */}
      <div className="w-full sm:w-1/3 flex-shrink-0">
        <Link href={`/celebrity/${celebrity.celebrity_slug}`}>
-         <img
+         <Image
+         width={100}
+         height={100}
            src={celebrity.image || 'https://via.placeholder.com/300'}
            alt={`${celebrity.first_name} ${celebrity.last_name}`}
            className="object-cover w-full h-48 sm:h-64 md:h-72 lg:h-80 rounded-t-lg sm:rounded-l-lg sm:rounded-t-none"

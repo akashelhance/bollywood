@@ -1,4 +1,5 @@
-
+import Link from "next/link";
+import Image from "next/image";
 const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
 
@@ -25,7 +26,9 @@ export default async function SpotCelebSideBarComponent(){
         {celebrities?.celebrities?.map((item, index) => (
           <li key={index} className="flex flex-col md:flex-row justify-between gap-x-6 py-5">
             <div className="flex min-w-0 gap-x-4">
-              <img
+              <Image
+               width={100}
+               height={100}
                 className="h-12 w-12 flex-none rounded-full bg-gray-50"
                 src={item.celebrity[0].image}
                 alt={item.celebrity[0].name}

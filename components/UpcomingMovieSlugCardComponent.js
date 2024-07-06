@@ -1,3 +1,6 @@
+import Link from "next/link"
+import Image from "next/image"
+
 export default function UpcomingMovieSlugCardComponent({data}) {
     return <>
   <div>
@@ -14,7 +17,9 @@ export default function UpcomingMovieSlugCardComponent({data}) {
                             </div>
                             <div className="flex flex-wrap p-6 ">
                                 <div className="w-full md:w-1/3 pt-12 sm:pt-2">
-                                    <img
+                                    <Image
+                                     width={100}
+                                     height={100}
                                         src={movie.poster}
                                         alt="Movie Image"
                                         className="w-full h-auto object-cover"
@@ -45,16 +50,16 @@ export default function UpcomingMovieSlugCardComponent({data}) {
                                     <div className="flex flex-row space-x-4">
                                         <h2 className="text-lg font-semibold">Similar To:</h2>
                                         {movie.similar_movies.map((similar, i) => (
-                                            <a key={i} href="#" className="text-blue-500 hover:underline">
+                                            <Link key={i} href="#" className="text-blue-500 hover:underline">
                                                 {similar.title}
-                                            </a>
+                                            </Link>
                                         ))}
                                     </div>
                                 </div>
                                 <div className="w-full flex flex-col md:flex-row justify-end mt-4 md:mt-0 md:col-span-2">
-                                    <a href={movie.trailer_url} target="_blank" rel="noopener noreferrer">
+                                    <Link href={movie.trailer_url} target="_blank" rel="noopener noreferrer">
                                         <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full mb-2 md:mr-2 transition duration-300 hover:shadow-md w-1/2">Watch Trailer</button>
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

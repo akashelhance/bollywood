@@ -1,5 +1,5 @@
 import LoadMore from "./LoadMore";
-
+import Image from "next/image";
 import Link from "next/link";
 
 export default function ProductRecommendCardComponent({data}) {
@@ -15,7 +15,9 @@ export default function ProductRecommendCardComponent({data}) {
           <div key={product.sku} className="flex flex-col md:flex-row -mx-4 mb-8">
             <div className="md:flex-1 px-4 md:w-1/3">
               <div className="h-auto mx-auto rounded-lg bg-gray-300 dark:bg-gray-700 mb-4 overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
-                <img
+                <Image
+                 width={100}
+                 height={100}
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
                   src={product.product_image}
                   alt="Product Image"

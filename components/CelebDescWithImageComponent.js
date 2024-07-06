@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function CelebDescWithImageComponent({ data }) {
 
 
@@ -25,7 +27,9 @@ export default function CelebDescWithImageComponent({ data }) {
 <div className="container mx-auto pb-4">
   <div className="w-full flex flex-col md:flex-row items-center border border-4 border-rose-800 rounded-lg shadow-md hover:shadow-lg transition duration-300">
     <div className="w-full md:w-64 h-96 mb-4 md:mb-0">
-      <img
+      <Image
+       width={100}
+       height={100}
         src={data.image}
         alt={`${data.first_name} ${data.last_name}`}
         className="object-cover w-full h-full"

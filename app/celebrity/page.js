@@ -32,13 +32,12 @@ export default function CelebrityPage() {
           <h1 className="text-4xl font-bold mb-2 text-gray-900 pb-4">
 
 
-            Indian  Celebs
+          Indian Celebrities and Famous Personalities
+
           </h1>
 
 
-
-
-          <div className="flex items-center mb-4">
+          {/* <div className="flex items-center mb-4">
             <Link href="/author">
               <Image
               width={100}
@@ -53,18 +52,18 @@ export default function CelebrityPage() {
               </Link>
               <p className="text-gray-600 text-sm">May 28, 2024</p>
             </div>
-          </div>
+          </div> */}
 
 
           <hr className="bg-purple-700 mt-2 mb-6" />
 
 
           <p className="text-xl text-gray-900 mb-6">
-            frequently use their prominenw attention to important social problems and enhance society. Hollywood celebrities as well as South Indian (Tamil, Telugu, Kannada, and Malayalam) and Bollywood industry celebrities are included here, providing the most recent stuff. Check out this website for the birthdays of your favourite South Indian, Hollywood, and Bollywood celebrities.
+            
           </p>
 
 
-          <h2 className="text-xl font-bold mb-2 text-gray-900"> Box Office Report :
+          <h2 className="text-xl font-bold mb-2 text-gray-900">  Indian Celebrities 
 
           </h2>
 
@@ -80,8 +79,8 @@ export default function CelebrityPage() {
         {/* Content for the second section */}
 
         <SpotCelebSideBarComponent />
-
-        <PopularPostSideBarComponent />
+{/* 
+        <PopularPostSideBarComponent /> */}
 
 
       </div>

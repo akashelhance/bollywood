@@ -62,7 +62,7 @@ export default async function productRecommendSlugPage({ params }) {
 
                 <SpotCelebSideBarComponent />
 
-                <PopularPostSideBarComponent />
+                {/* <PopularPostSideBarComponent /> */}
 
 
             </div>

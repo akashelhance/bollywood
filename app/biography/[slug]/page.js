@@ -42,12 +42,6 @@ export default async function BiographySlugPage({ params }) {
           <BoiTableComponent data={[data]} />
 
 
-
-
-
-
-
-
         </div>
 
 
@@ -59,8 +53,8 @@ export default async function BiographySlugPage({ params }) {
         {/* Content for the second section */}
 
         <SpotCelebSideBarComponent />
-
-        <PopularPostSideBarComponent />
+{/* 
+        <PopularPostSideBarComponent /> */}
 
 
       </div>

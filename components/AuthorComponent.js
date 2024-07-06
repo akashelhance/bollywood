@@ -15,7 +15,7 @@ export default function AuthorComponent(){
 
 
 
-
+{/* 
 <div className="flex items-center mb-4">
   <Link href="/author">
     <Image
@@ -31,7 +31,7 @@ export default function AuthorComponent(){
     </Link>
     <p className="text-gray-600 text-sm">May 28, 2024</p>
   </div>
-</div>
+</div> */}
 
 
 <hr className="bg-purple-700 mt-2 mb-6" />

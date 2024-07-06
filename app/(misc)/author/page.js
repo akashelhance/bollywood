@@ -1,5 +1,6 @@
 import AuthorComponent from "@/components/AuthorComponent";
 import SideBarComponent from "@/components/SideBarComponent";
+import SpotCelebSideBarComponent from "@/components/SpotCelebSideBarComponent";
 
 export default function Author(){
     return<>
@@ -24,7 +25,7 @@ export default function Author(){
  
                  {/* Content for the second section */}
  
-           <SideBarComponent/>
+           <SpotCelebSideBarComponent/>
  
  
              </div>

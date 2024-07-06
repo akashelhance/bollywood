@@ -28,7 +28,7 @@ const BelowFooter = () => {
               </svg>
             </Link>
             <Link
-              href="#"
+              href="https://x.com/mediawoodgossip"
               className="inline-flex items-center justify-center h-8 w-8 border border-gray-100 rounded-full mr-1 hover:text-rose-700 hover:border-blue-400"
             >
               <svg

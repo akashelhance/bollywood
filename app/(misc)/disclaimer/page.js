@@ -1,5 +1,6 @@
 import DisclaimerComponent from "@/components/DisclaimerComponent";
 import SideBarComponent from "@/components/SideBarComponent";
+import SpotCelebSideBarComponent from "@/components/SpotCelebSideBarComponent";
 
 export default function Disclaimer(){
     return<>
@@ -23,8 +24,7 @@ export default function Disclaimer(){
 
 
                 {/* Content for the second section */}
-
-            <SideBarComponent/>
+<SpotCelebSideBarComponent/>
 
 
             </div>

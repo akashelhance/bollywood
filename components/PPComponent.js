@@ -16,7 +16,7 @@ Privacy Policy
 
 
 
-<div className="flex items-center mb-4">
+{/* <div className="flex items-center mb-4">
   <Link href="/author">
     <Image 
     width={100}
@@ -31,7 +31,7 @@ Privacy Policy
     </Link>
     <p className="text-gray-600 text-sm">May 28, 2024</p>
   </div>
-</div>
+</div> */}
 
 
 <hr className="bg-purple-700 mt-2 mb-6" />

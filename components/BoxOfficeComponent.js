@@ -11,11 +11,11 @@ export default function BoxOfficeComponent() {
 
 
       <h1 className="text-4xl font-bold mb-2 text-gray-900">
-        BOLLYWOOD BOX OFFICE COLLECTION 2024 REPORT & VERDICT INDIA
+        BollyWood Box Office Collection 2024 Report & Verdict India
       </h1>
 
 
-      <div className="flex items-center mb-4">
+      {/* <div className="flex items-center mb-4">
         <Image
          width={100}
          height={100}
@@ -27,7 +27,7 @@ export default function BoxOfficeComponent() {
           <p className="text-gray-900 font-semibold">John Doe</p>
           <p className="text-gray-600 text-sm">May 28, 2024</p>
         </div>
-      </div>
+      </div> */}
 
 
       <hr className="bg-purple-700 mt-2 mb-6" />

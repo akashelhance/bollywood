@@ -30,7 +30,7 @@ export default async function BoxOfficeTableComponent() {
   return (
     <div className="container mx-auto p-4">
       <div className="flex flex-col md:flex-row md:justify-between md:items-center mb-4">
-        <h2 className="text-2xl font-bold text-gray-900 mb-2 md:mb-0">L port :</h2>
+        <h2 className="text-2xl font-bold text-gray-900 mb-2 md:mb-0">Box Office Report 2024</h2>
         {/* <input
           type="text"
           className="w-full md:w-64 p-2 border border-gray-300 rounded-lg"

@@ -1,5 +1,6 @@
 import ContactComponents from "@/components/ContactComponents";
 import SideBarComponent from "@/components/SideBarComponent";
+import SpotMovieSideBarComponent from "@/components/SpotMovieSideBarComponent";
 
 
 export default function Contact() {
@@ -15,11 +16,6 @@ export default function Contact() {
 
                 <ContactComponents />
 
-
-
-
-
-
             </div>
             {/* Second Section (1/6 width) */}
             <div className="w-full md:w-1/6 sm:container">
@@ -27,8 +23,7 @@ export default function Contact() {
 
                 {/* Content for the second section */}
 
-                <SideBarComponent />
-
+                <SpotMovieSideBarComponent/>
 
             </div>
         </div>

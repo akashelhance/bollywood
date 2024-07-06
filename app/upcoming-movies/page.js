@@ -26,23 +26,16 @@ export default async function UpcomingMoviesPage() {
         {/* First Section (5/6 width) */}
         <div className="w-full md:w-5/6 mb-4 md:mb-0 ">
 
-
-
             {/* Content for the first section */}
 
             <div className="max-w-7xl mx-auto p-6  shadow-xl rounded-lg bg-teal-50">
 
-
-
                 <h1 className="text-4xl font-bold mb-2 text-gray-900 pb-4">
 
-                    UPCOMING BOLLYWOOD HINDI MOVIES LIST (2024)
+                    Upcoming Bollywood Hindi Movies List (2024)
                 </h1>
 
-
-
-
-                <div className="flex items-center mb-4">
+                {/* <div className="flex items-center mb-4">
                     <Image
                      width={100}
                      height={100}
@@ -54,7 +47,7 @@ export default async function UpcomingMoviesPage() {
                         <p className="text-gray-900 font-semibold">John Doe</p>
                         <p className="text-gray-600 text-sm">May 28, 2024</p>
                     </div>
-                </div>
+                </div> */}
 
 
                 <hr className="bg-purple-700 mt-2 mb-6" />
@@ -84,7 +77,7 @@ export default async function UpcomingMoviesPage() {
 
             <SpotMovieSideBarComponent />
 
-            <PopularPostSideBarComponent/>
+            {/* <PopularPostSideBarComponent/> */}
 
 
 

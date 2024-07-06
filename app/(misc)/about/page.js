@@ -1,5 +1,6 @@
 import AboutComponents from "@/components/AboutComponents";
 import SideBarComponent from "@/components/SideBarComponent";
+import SpotCelebSideBarComponent from "@/components/SpotCelebSideBarComponent";
 
 export default function About(){
     return<>
@@ -18,7 +19,7 @@ export default function About(){
 
                 {/* Content for the second section */}
 
-            <SideBarComponent/>
+        <SpotCelebSideBarComponent/>
 
 
             </div>

@@ -44,16 +44,11 @@ export default async function UpcomingMoviesSlugPage({ params }) {
                     <CelebDescWithImageComponent data={data} />
 
 
-
-
                     {/* Content for the Product Recommend section */}
                     <TabLinkCelebComponent  id={params.slug} />
                            
                             <UpcomingMovieSlugCardComponent data={data}/>
-                          
 
-                   
-                
 
                 </div>
 
@@ -67,7 +62,7 @@ export default async function UpcomingMoviesSlugPage({ params }) {
 
                 <SpotCelebSideBarComponent />
 
-                <PopularPostSideBarComponent />
+                {/* <PopularPostSideBarComponent /> */}
 
 
             </div>

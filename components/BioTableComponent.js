@@ -6,9 +6,9 @@ export default function BoiTableComponent({data}){
     return <>
 
 {data.map((celebrity) => (
-          <h1 key={celebrity.id} className="py-2 px-4 border-b text-center text-lg">{celebrity.first_name} {celebrity.last_name} Biography</h1>
+          <h1 key={celebrity.id} className="text-2xl font-bold mb-2 text-gray-900 py-2 px-4 border-b text-center hover:text-rose-500">{celebrity.first_name} {celebrity.last_name} Age, Height, Weight, Wiki, Biography, Family, And More
+</h1>
         ))}
-
 
 <div className="overflow-x-auto">
   <table className="min-w-full bg-white border-4 border-rose-800 mt-12">
@@ -136,7 +136,7 @@ export default function BoiTableComponent({data}){
 
 
 {data.map((celebrity) => (
-          <h2 key={celebrity.id} className="py-2 px-4 border-b text-center text-lg">{celebrity.first_name} {celebrity.last_name} SOCIAL MEDIA ACCOUNTS
+          <h2 key={celebrity.id} className="pt-4 text-2xl font-bold mb-2 text-gray-900 py-2 px-4 border-b text-center hover:text-rose-500">{celebrity.first_name} {celebrity.last_name} Social Media Accounts
 </h2>
         ))}
 

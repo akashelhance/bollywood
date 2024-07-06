@@ -39,7 +39,7 @@ export default async function BoxOfficePage() {
                
              <BoxOfficeComponent/>
 
-            <RelatedArticleComponent/>
+            {/* <RelatedArticleComponent/> */}
                
 
 
@@ -52,7 +52,7 @@ export default async function BoxOfficePage() {
                 {/* Content for the second section */}
 
             <SpotMovieSideBarComponent/>
-                    <PopularPostSideBarComponent/>
+                    {/* <PopularPostSideBarComponent/> */}
 
 
             </div>

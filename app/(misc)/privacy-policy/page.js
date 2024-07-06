@@ -1,5 +1,6 @@
 import PPComponent from "@/components/PPComponent";
 import SideBarComponent from "@/components/SideBarComponent";
+import SpotMovieSideBarComponent from "@/components/SpotMovieSideBarComponent";
 
 export default function PrivacyPolicy(){
     return<>
@@ -24,8 +25,7 @@ export default function PrivacyPolicy(){
  
  
                  {/* Content for the second section */}
- 
-            <SideBarComponent/>
+ <SpotMovieSideBarComponent/>
  
  
              </div>

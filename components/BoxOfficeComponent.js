@@ -34,7 +34,6 @@ export default function BoxOfficeComponent() {
 
 
       <p className="text-lg text-gray-700 mb-6">
-        Bollywood  Box Office collection in India so far of all Hindi movies in 2024 This list is updated on May 28, 2024. Movie Costs are estimates containing both Production and Prints and Advertising costs. This contains only Net Collections it doesn’t include overseas collections. We have added the big Tamil and Telugu movies with their updated collections for 2023 and 2024 also Here is the complete list.
 
       </p>
 

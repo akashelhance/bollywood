@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "PropertyPulse| Find The Best Property in Your Area",
+  title: "PropertyPulse| Find The Best ",
   description: "Find Your Dream House",
   keyword: "rentals, find rental homes"
 };

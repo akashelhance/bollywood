@@ -18,7 +18,7 @@ async function fetchData() {
 export default async function BoxOfficeTableComponent() {
 
   const filteredMovies= await fetchData()
-
+  console.log(filteredMovies)
 
 
   // const [searchQuery, setSearchQuery] = useState('');
@@ -47,13 +47,13 @@ export default async function BoxOfficeTableComponent() {
               <span className="font-bold">MOVIE NAME:</span> {movie.title}
             </div>
             <div className="mb-2">
-              <span className="font-bold">BOX OFFICE COLLECTION:</span> {movie.box_office_collection}
+              <span className="font-bold">BOX OFFICE COLLECTION:</span> {movie.box_office_collection_in_crores}
             </div>
             <div className="mb-2">
-              <span className="font-bold">1st DAY COLLECTION:</span> N/A {/* 1st day collection not available in the provided JSON */}
+              <span className="font-bold">1st DAY COLLECTION:</span> {movie.day1_box_office_collection}
             </div>
             <div className="mb-2">
-              <span className="font-bold">BUDGET:</span> {movie.movie_budget}
+              <span className="font-bold">BUDGET:</span> {movie.movie_budget_in_crores}
             </div>
             <div>
               <span className="font-bold">STATUS:</span>
@@ -95,9 +95,9 @@ export default async function BoxOfficeTableComponent() {
             {filteredMovies.map((movie, index) => (
               <tr key={index} className={`border border-gray-300 ${index % 2 === 0 ? 'bg-gray-50' : 'bg-white'} hover:bg-gray-100`}>
                 <td className="px-4 py-2 text-center">{movie.title}</td>
-                <td className="px-4 py-2 text-center">{movie.box_office_collection}</td>
-                <td className="px-4 py-2 text-center">N/A</td> {/* 1st day collection not available in the provided JSON */}
-                <td className="px-4 py-2 text-center">{movie.movie_budget}</td>
+                <td className="px-4 py-2 text-center">{movie.box_office_collection_in_crores}</td>
+                <td className="px-4 py-2 text-center">{movie.day1_box_office_collection}</td> {/* 1st day collection not available in the provided JSON */}
+                <td className="px-4 py-2 text-center">{movie.box_office_collection_in_crores}</td>
                 <td className="px-4 py-2 text-center">
                   <span className={`px-2 py-1 rounded-full text-white ${
                     movie.verdict === 'Block' ? 'bg-green-800' :

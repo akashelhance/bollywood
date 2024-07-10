@@ -1,27 +1,10 @@
 
-
-
-
 import BoxOfficeComponent from "@/components/BoxOfficeComponent";
-import PopularPostSideBarComponent from "@/components/PopularPostSideBarComponent";
 
-
-import RelatedArticleComponent from "@/components/RelatedArticleComponent";
 
 import SpotMovieSideBarComponent from "@/components/SpotMovieSideBarComponent";
 
 import Link from "next/link";
-
-
-export const metadata = {
-    title: "Bollywood Movies Box Office Collection Update-2024",
-    description: "Get the complete update on the Box Office Collection for Bollywood Movies, Latest Bollywood Movies Box Office Collection",
-    keyword: "rentals, find rental homes"
-  };
-
-
-
-
 
 export default async function BoxOfficePage() {
 

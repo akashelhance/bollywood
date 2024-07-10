@@ -48,7 +48,7 @@ export default function UpcomingMovieCardComponent({ data }) {
                   src={movie.poster}
                   alt="Movie Image"
                   layout="fill"
-                  objectFit="cover"
+                  objectFit="contain"
                   className="rounded-md transition duration-500 ease-in-out"
                 />
               </div>

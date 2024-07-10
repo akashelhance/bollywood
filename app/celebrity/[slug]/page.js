@@ -8,6 +8,8 @@ import TabLinkCelebComponent from "@/components/TabLinkCelebComponent"
 import Link from "next/link"
 
 
+
+
 export default function SingleCelebPage({ params }) {
   return <>
 

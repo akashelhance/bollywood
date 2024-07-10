@@ -41,14 +41,19 @@ const celebrities= await fetchData()
     {celebrities.map((celebrity) => (
      <div key={celebrity.id} className="bg-white rounded-lg shadow-lg flex flex-col sm:flex-row max-w-4xl mb-4">
      {/* Image Section */}
-     <div className="w-full sm:w-1/3 flex-shrink-0">
+     <div className=" sm:w-1/3 flex-shrink-0">
        <Link href={`/celebrity/${celebrity.celebrity_slug}`}>
          <Image
+        // style={{
+        //   objectFit: 'contain'
+        // }}
+         unoptimized
+         quality={100}
          width={100}
          height={100}
-           src={celebrity.image || 'https://via.placeholder.com/300'}
-           alt={`${celebrity.first_name} ${celebrity.last_name}`}
-           className="object-cover w-full h-48 sm:h-64 md:h-72 lg:h-80 rounded-t-lg sm:rounded-l-lg sm:rounded-t-none"
+         src={celebrity.image || 'https://via.placeholder.com/300'}
+         alt={`${celebrity.first_name} ${celebrity.last_name}`}
+         className="sm:object-contain lg:object-cover w-full h-48 sm:h-64 md:h-72 lg:h-80 rounded-t-lg sm:rounded-l-lg sm:rounded-t-none"
          />
        </Link>
      </div>

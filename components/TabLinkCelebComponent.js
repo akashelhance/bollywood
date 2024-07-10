@@ -54,7 +54,7 @@ export default function TabLinkCelebComponent({ id,data }) {
         active={activeLink === 'Biography'}
         onClick={() => handleLinkClick('Biography')}
       /> */}
-      {data.upcoming_movies_count > 0 && (
+      {data?.upcoming_movies_count > 0 && (
         <TabLink
           href={`/upcoming-movies/${data.celebrity_slug}`}
           text="Upcoming Movies"
@@ -62,7 +62,7 @@ export default function TabLinkCelebComponent({ id,data }) {
           onClick={() => handleLinkClick('Upcoming Movies')}
         />
       )}
-      {data.recommended_products_count > 0 && (
+      {data?.recommended_products_count > 0 && (
         <TabLink
           href={`/recommended-products/${data.celebrity_slug}`}
           text="Recommended Products"
@@ -70,7 +70,7 @@ export default function TabLinkCelebComponent({ id,data }) {
           onClick={() => handleLinkClick('Recommended Products')}
         />
       )}
-      {data.awards_count > 0 && (
+      {data?.awards_count > 0 && (
         <TabLink
           href={`/awards/${data.celebrity_slug}`}
           text="Awards"
@@ -78,7 +78,7 @@ export default function TabLinkCelebComponent({ id,data }) {
           onClick={() => handleLinkClick('Awards')}
         />
       )}
-      {data.vehicle_collection_count > 0 && (
+      {data?.vehicle_collection_count > 0 && (
         <TabLink
           href={`/vehicle-collection/${data.celebrity_slug}`}
           text="Vehicle Collection"

@@ -17,7 +17,7 @@ export default function ContactComponents(){
 
 
 
-<div className="flex items-center mb-4">
+{/* <div className="flex items-center mb-4">
   <Link href="/author">
     <Image
      width={100}
@@ -32,14 +32,13 @@ export default function ContactComponents(){
     </Link>
     <p className="text-gray-600 text-sm">May 28, 2024</p>
   </div>
-</div>
+</div> */}
 
 
 <hr className="bg-purple-700 mt-2 mb-6" />
 
 
 <p className="text-xl text-gray-900 mb-6">
-  frequently use their prominenw attention to important social problems and enhance society. Hollywood celebrities as well as South Indian (Tamil, Telugu, Kannada, and Malayalam) and Bollywood industry celebrities are included here, providing the most recent stuff. Check out this website for the birthdays of your favourite South Indian, Hollywood, and Bollywood celebrities.
 </p>
 
 

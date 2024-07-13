@@ -37,7 +37,7 @@ export default function UpcomingWebSeriesComponent({ data }) {
                         <div className="bg-white shadow-md rounded-lg overflow-hidden">
                             <div className="p-6 border-b border-gray-200">
                                 <h1 className="text-2xl font-bold transition duration-500 ease-in-out hover:text-rose-500">
-                                    {movie.title}
+                                    {movie.web_series_title}
                                 </h1>
                                 <p className="text-gray-900 transition duration-500 ease-in-out">
                                     <span className="font-semibold text-rose-500">Language:</span> {movie.audio_languages}

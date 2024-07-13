@@ -8,7 +8,7 @@ const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 export const metadata = {
     title: "Upcoming Bollywod Movies Update| Upcoming Movies in 2024",
     description: "Get complete information about the upcoming Bollywood movies in 2024.Movies that are released in 2024 with casting and movie plot details",
-    keyword: "Upcoming Bollywood Movie 2024, Upcoming Movies 2024, Bollywood Movies releasing in 2024"
+    keyword: "Upcoming Bollywood Movie in 2024, Upcoming Movies 2024, Bollywood Movies releasing in 2024"
   };
   
 
@@ -60,6 +60,7 @@ export default async function UpcomingMoviesPage() {
 
 
                 <p className="text-xl text-gray-900 mb-6">
+                If you are looking for upcoming movies, then explore this page to get complete information about upcoming Bollywood movies in 2024. Get an update on the movie's cast, plot, and genre. Also, you will get to know where you can watch the movie, like if it is releasing in the movie hall or on an OTT platform like Netflix, Amazon Prime, or Zee 5.
                 </p>
 
 

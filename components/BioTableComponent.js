@@ -39,7 +39,6 @@ export default function BoiTableComponent({ data }) {
             { label: 'Caste', key: 'biography.caste' },
             { label: 'Hobbies', key: 'biography.hobbies' },
             { label: 'Vegetarian', key: 'biography.vegetarian' },
-
             { label: 'Net Worth (in Crores)', key: 'biography.net_worth_in_crores' },
             { label: 'Net Worth (in Millions)', key: 'biography.net_worth_in_millions' },
             { label: 'Net Worth Currency', key: 'biography.net_worth_currency' },

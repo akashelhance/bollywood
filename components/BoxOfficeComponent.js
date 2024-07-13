@@ -34,6 +34,7 @@ export default function BoxOfficeComponent() {
 
 
       <p className="text-lg text-gray-700 mb-6">
+      If you are looking to know whether your favorite movie is a hit at the box office, then explore this page to learn about the first-day and first-week collections at the box office. Along with that, get to know whether the movie is a hit or flop. We at Filmiwood constantly update this page to provide accurate information about Bollywood box office collections. 
 
       </p>
 

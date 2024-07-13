@@ -48,7 +48,7 @@ const Navbar = () => {
         </button>
         <div className={`lg:flex flex-grow justify-center items-center ${isOpen ? 'block' : 'hidden'}`}>
           <ul className="flex flex-col lg:flex-row lg:space-x-8 lg:items-center">
-            <NavItem href="/" selected={selected} onItemClick={handleItemClick}>Home</NavItem>
+            {/* <NavItem href="/" selected={selected} onItemClick={handleItemClick}>Home</NavItem> */}
             <NavItem href="/upcoming-movies" selected={selected} onItemClick={handleItemClick}>Upcoming Movies</NavItem>
             <NavItem href="/upcoming-web-series" selected={selected} onItemClick={handleItemClick}>Upcoming Web Series</NavItem>
 

@@ -4,20 +4,31 @@ import CelebDescWithImageComponent from "@/components/CelebDescWithImageComponen
 import CelebFactComponent from "@/components/CelebFactComponent";
 import CelebFaqComponent from "@/components/CelebFaqComponent";
 import CelebRelComponent from "@/components/CelebRelComponent";
-// import PopularPostSideBarComponent from "@/components/PopularPostSideBarComponent"
 import SpotCelebSideBarComponent from "@/components/SpotCelebSideBarComponent"
 import TabLinkCelebComponent from "@/components/TabLinkCelebComponent"
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
-// export const metadata = {
-//   title: "Bollywood Movies Box Office Collection Update-2024",
-//   description: "Get the complete update on the Box Office Collection for Bollywood Movies, Latest Bollywood Movies Box Office Collection",
-//   keyword: "rentals, find rental homes"
-// };
 
+export async function generateMetadata({ params, searchParams }, parent) {
+  // read route params
+  const id = params.slug;
+  const biography = "biography";
 
-export let metadata = {}
+  const result = id + " " + biography;
+
+ 
+  // fetch data
+  // const res = await fetch(`${apiUrl}/api/celebrity/biography/${params.slug}`);
+ 
+  // optionally access and extend (rather than replace) parent metadata
+  // const previousImages = (await parent).openGraph?.images || []
+ 
+  return {
+    title: result ,
+  
+  }
+}
 
 
 
@@ -34,16 +45,6 @@ export default async function BiographySlugPage({ params }) {
 
   }
 
-  function setMetaData() {
-
-    metadata= {
-      title: data.first_name ,
-      description: "Get est Bollywood Movies Box Office Collection",
-      keyword: "rentals, find rental homes"
-    };
-  
-  }
-
 
   async function fetchFactsAndFaq() {
     const res = await fetch(`${apiUrl}/api/celebrity/facts/${params.slug}`);
@@ -57,7 +58,6 @@ export default async function BiographySlugPage({ params }) {
 
   const data = await fetchData()
 
-  setMetaData()
 
   const FactsAndFAQ = await fetchFactsAndFaq()
 
@@ -66,7 +66,7 @@ export default async function BiographySlugPage({ params }) {
   const Fact = FactsAndFAQ.celebrity_facts
 
 
-console.log("Data " , data)
+
   return <>
     
 
@@ -89,12 +89,12 @@ console.log("Data " , data)
 
           <BoiTableComponent data={[data]} />
 
-          <CelebCovComponent controversies={data.biography.celebrity_controversies} data={data} />
+          {data.biography.celebrity_controversies && data.biography.celebrity_controversies.length >0 && <CelebCovComponent controversies={data.biography.celebrity_controversies} data={data} />}
           {/* <CelebRelComponent relationship={data.biography.celebrity_relationship} data={data} /> */}
 
-          <CelebFactComponent celebrityFacts={Fact} data={data} />
+         { Fact.length > 0 && <CelebFactComponent celebrityFacts={Fact} data={data} />}
 
-          <CelebFaqComponent faqs={FAQ} data={[data]} />
+        { FAQ.length > 0 && <CelebFaqComponent faqs={FAQ} data={[data]} />}
 
         </div>
 

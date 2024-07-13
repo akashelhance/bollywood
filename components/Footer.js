@@ -72,11 +72,11 @@ const Footer = () => {
                 Contact Us
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="/author" className="hover:text-blue-400">
               Authors Page
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link href="/privacy-policy" className="hover:text-blue-400">
                 Privacy Policy
@@ -175,11 +175,11 @@ const Footer = () => {
                 Contact Us
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link href="/author" className="hover:text-blue-400">
               Authors Page
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link href="/privacy-policy" className="hover:text-blue-400">
                 Privacy Policy

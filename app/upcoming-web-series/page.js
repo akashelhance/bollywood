@@ -68,6 +68,8 @@ export default async function UpComingWebSeriesPage() {
 
 
                     <p className="text-xl text-gray-900 mb-6">
+                    If you are looking for upcoming web series, then explore this page to get complete information about upcoming web series in 2024. Get an update on the web series's cast, plot, and genre. Also, you will get to know where you can watch the web series, like if it is releasing on which OTT platform like Netflix, Amazon Prime, or Zee 5.
+
                     </p>
 
 

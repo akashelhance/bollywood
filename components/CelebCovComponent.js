@@ -15,14 +15,14 @@ export default function CelebCovComponent({data, controversies}){
           </p>
         </div>
         <div className="mx-auto mt-8 grid max-w-full divide-y divide-neutral-200 w-full">
-          {controversies?.map((fact) => (
-            <div className="py-5 w-full" key={fact.id}>
+          {controversies?.map((contro) => (
+            <div className="py-5 w-full" key={contro.id}>
               <div className="flex flex-col items-center">
-                {fact.image ? <img src={fact.image} alt="done" className="mb-4" /> : null}
-                {fact.heading ? <h3 className="mb-4 text-neutral-600 text-2xl">{fact.heading}</h3> : null}
-                {fact.text ? <p className="mb-4 text-neutral-600">{fact.text}</p> : null}
-                {fact.embedded_code ? (
-                  <div dangerouslySetInnerHTML={{ __html: fact.embedded_code }} />
+                {contro.image ? <img src={contro.image} alt="done" className="mb-4" /> : null}
+                {contro.heading ? <h3 className="mb-4 text-neutral-600 text-2xl">{contro.heading}</h3> : null}
+                {contro.text ? <p className="mb-4 text-neutral-600">{contro.text}</p> : null}
+                {contro.embedded_code ? (
+                  <div dangerouslySetInnerHTML={{ __html: contro.embedded_code }} />
                 ) : null}
               </div>
             </div>

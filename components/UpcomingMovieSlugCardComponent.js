@@ -4,7 +4,7 @@ import Image from "next/image"
 export default function UpcomingMovieSlugCardComponent({data}) {
     return <>
   <div>
-            <h1 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-red-500 font-bold pt-8 hover:text-red-700 ">
+            <h1 className="text-center text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-grey-900 font-bold pt-8 hover:text-red-700 ">
                 {data.first_name} {data.last_name} Upcoming Movies
             </h1>
             <div className="pt-4 pb-2 flex flex-col md:flex-row ">

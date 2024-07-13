@@ -1,10 +1,14 @@
 
 import BoxOfficeComponent from "@/components/BoxOfficeComponent";
-
-
 import SpotMovieSideBarComponent from "@/components/SpotMovieSideBarComponent";
 
-import Link from "next/link";
+
+export const metadata = {
+    title: "BollyWood Box Office Collection 2024 Report & Verdict|Bollywood movies box collection update",
+    description: "Get complete information about the BollyWood Box Office Collection 2024 Report & Verdict",
+    keyword: "Bollywood Box Office Collection in 2024, Box Office Update 2024, Movie Hit or Flop Update"
+  };
+
 
 export default async function BoxOfficePage() {
 

@@ -2,6 +2,13 @@ import AboutComponents from "@/components/AboutComponents";
 import SideBarComponent from "@/components/SideBarComponent";
 import SpotCelebSideBarComponent from "@/components/SpotCelebSideBarComponent";
 
+export const metadata = {
+    title: "About Filmiwood| Movie, Box office, Web Series and Biography",
+    description: "Filmiwood provides information about films, web series, and box office updates, along with a biography of celebrities and their influences.",
+    keyword: "Bollywood Movie Update, Box office Collection Update, Upcoming movie and web series"
+  };
+
+
 export default function About(){
     return<>
 

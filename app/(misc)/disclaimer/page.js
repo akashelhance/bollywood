@@ -2,6 +2,13 @@ import DisclaimerComponent from "@/components/DisclaimerComponent";
 import SideBarComponent from "@/components/SideBarComponent";
 import SpotCelebSideBarComponent from "@/components/SpotCelebSideBarComponent";
 
+
+export const metadata = {
+    title: "Disclaimer Filmiwood",
+    description: "Filmiwood gathers all the information through social media. We try our best to post all the accurate information, but by mistake, the information might not be 100% accurate.  ",
+    keyword: "Disclamier filmiwood"
+  };
+
 export default function Disclaimer(){
     return<>
    <div className="bg-grey-100 px-6 pt-16 pb-20 flex flex-col md:flex-row">

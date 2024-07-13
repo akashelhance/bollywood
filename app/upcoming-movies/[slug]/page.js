@@ -39,7 +39,7 @@ export default async function UpcomingMoviesSlugPage({ params }) {
 
 
                 {/* Content for the first section */}
-                <div className="max-w-8xl  p-6  shadow-xl rounded-lg bg-orange-50">
+                <div className="max-w-7xl  p-6  shadow-xl rounded-lg bg-orange-50">
 
                     <CelebDescWithImageComponent data={data} />
 

@@ -1,11 +1,8 @@
 
-
-
 import CelebCardComponent from "@/components/CelebCardComponent"
 import PopularPostSideBarComponent from "@/components/PopularPostSideBarComponent"
 import SpotCelebSideBarComponent from "@/components/SpotCelebSideBarComponent"
-import Link from "next/link"
-import Image from "next/image"
+
 
 export const metadata = {
   title: "Bollywood Movies Box Office Collection Update-2024",

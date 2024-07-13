@@ -2,6 +2,13 @@ import ContactComponents from "@/components/ContactComponents";
 import SideBarComponent from "@/components/SideBarComponent";
 import SpotMovieSideBarComponent from "@/components/SpotMovieSideBarComponent";
 
+export const metadata = {
+    title: "Contact Filmiwood",
+    description: "If you have any suggestions or messages for Filmiwood, please feel free to contact us. ",
+    keyword: "contact filmiwood"
+  };
+  
+
 
 export default function Contact() {
     return <>

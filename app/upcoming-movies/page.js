@@ -3,8 +3,14 @@ import PopularPostSideBarComponent from "@/components/PopularPostSideBarComponen
 import SpotMovieSideBarComponent from "@/components/SpotMovieSideBarComponent";
 import UpcomingMovieCardComponent from "@/components/UpcomingMovieCardComponent";
 
-import Image from "next/image";
 const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
+export const metadata = {
+    title: "Upcoming Bollywod Movies Update| Upcoming Movies in 2024",
+    description: "Get complete information about the upcoming Bollywood movies in 2024.Movies that are released in 2024 with casting and movie plot details",
+    keyword: "Upcoming Bollywood Movie 2024, Upcoming Movies 2024, Bollywood Movies releasing in 2024"
+  };
+  
 
 
 async function fetchData() {

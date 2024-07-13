@@ -6,6 +6,12 @@ import Image from "next/image";
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
+export const metadata = {
+    title: "Upcoming Web Series Update| Upcoming Web Series in 2024",
+    description: "Get complete information about the upcoming Web Series in 2024.Web Series that are released in 2024 with casting and web series plot details",
+    keyword: "Upcoming web series in 2024, Upcoming web series 2024, Web Series releasing in 2024"
+  };
+
 
 async function fetchData() {
     const res = await fetch(`${apiUrl}/api/webseries/upcoming`);

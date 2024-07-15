@@ -10,7 +10,7 @@ export default function CelebFactComponent({ data, celebrityFacts }) {
           </h2>
 
           <p className="mt-3 text-lg text-neutral-500 md:text-xl">
-            Here are some interesting facts about celebrities.
+            Here are some interesting facts about {data.first_name} {data.last_name}.
           </p>
         </div>
         <div className="mx-auto mt-8 grid max-w-full divide-y divide-neutral-200 w-full">

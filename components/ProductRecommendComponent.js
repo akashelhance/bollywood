@@ -75,7 +75,7 @@ export default function ProductRecommendCardComponent({data}) {
                 <div className="flex -mx-2 mb-4 pt-8">
                   {product.links.map((link) => (
                     <div key={link.id} className="w-1/2 px-2">
-                      <Link href={link.link}
+                      <Link href={link.link || ""}
                       className="w-full bg-gradient-to-r from-pink-500 to-orange-500 text-white shadow-lg rounded-b-lg font-bold py-2 px-4 inline-flex items-center justify-center transform transition-transform duration-300 shadow-md hover:bg-purple-800 hover:scale-105">
                           <span className="text-center">View On {link.platform}</span>
                       

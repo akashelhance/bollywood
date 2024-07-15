@@ -108,7 +108,7 @@ export default function UpcomingWebSeriesComponent({ data }) {
                                 </div>
                                 <div className="w-full flex flex-col md:flex-row justify-end mt-4 md:mt-0 md:col-span-2">
                                     {movie.promotional_video_url ? (
-                                        <Link href={movie.promotional_video_url} target="_blank" rel="noopener noreferrer">
+                                        <Link href={movie.promotional_video_url || ""} target="_blank" rel="noopener noreferrer">
                                             <button className="bg-gradient-to-r from-pink-500 to-orange-500 text-white shadow-lg rounded-b-lg font-bold py-2 px-4 rounded inline-flex items-center">
                                                 Watch Trailer
                                             </button>

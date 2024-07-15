@@ -12,20 +12,17 @@ const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
 export async function generateMetadata({ params, searchParams }, parent) {
   // read route params
-  const id = params.slug;
-  const biography = "biography";
-
-  const result = id + " " + biography;
-
+  let id = params.slug;
+  const string = "Age, Height, Relationship, Biography, Facts";
+  const biography = "Biography"
+  
  
-  // fetch data
-  // const res = await fetch(`${apiUrl}/api/celebrity/biography/${params.slug}`);
- 
-  // optionally access and extend (rather than replace) parent metadata
-  // const previousImages = (await parent).openGraph?.images || []
+  const result = id + " " + string + "|" + id + " " + biography
  
   return {
     title: result ,
+    description: "In this article ",
+    keywords: ""
   
   }
 }

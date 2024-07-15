@@ -72,11 +72,11 @@ const AwardMainComponents = () => {
                                 {award.description || 'No description available.'}
                             </p>
                             <div className="flex flex-row gap-4">
-                                <Link href={award.website} className="text-lg text-rose-500 hover:underline hover:text-rose-700">
+                                <Link href={award.website || ""} className="text-lg text-rose-500 hover:underline hover:text-rose-700">
                                     Winners
                                 </Link>
 
-                                <Link href={award.website} className="text-lg text-rose-500 hover:underline hover:text-rose-700">
+                                <Link href={award.website || ""} className="text-lg text-rose-500 hover:underline hover:text-rose-700">
                                 Nomination
                                 </Link>
                             </div>

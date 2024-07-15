@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const TabLink = ({ href, text, active, onClick }) => (
   <Link
-    href={href}
+    href={href || ""}
     onClick={onClick}
     className={`px-2 py-1 text-lg mx-1 my-2 transition duration-150 ${
       active

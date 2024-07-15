@@ -10,7 +10,7 @@ export default function CelebFaqComponent({faqs, data}){{
 </h2>
       ))}
       <p className="mt-3 text-lg text-neutral-500 md:text-xl">
-        Frequently asked questions
+        Frequently asked questions about {celebrity.first_name} {celebrity.last_name}
       </p>
     </div>
     <div className="mx-auto mt-8 grid max-w-full divide-y divide-neutral-200 w-full">

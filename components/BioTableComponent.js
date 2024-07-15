@@ -173,22 +173,22 @@ export default function BoiTableComponent({ data }) {
                 </td>
                 <td className="py-2 px-4 border-b text-center text-lg">
                   {celebrity.biography.instagram ? (
-                    <Link href={celebrity.biography.instagram} className="text-blue-500">Profile</Link>
+                    <Link href={celebrity.biography.instagram || ''} className="text-blue-500">Profile</Link>
                   ) : 'NaN'}
                 </td>
                 <td className="py-2 px-4 border-b text-center text-lg">
                   {celebrity.biography.twitter ? (
-                    <Link href={celebrity.biography.twitter} className="text-blue-500">Profile</Link>
+                    <Link href={celebrity.biography.twitter || ''} className="text-blue-500">Profile</Link>
                   ) : 'NaN'}
                 </td>
                 <td className="py-2 px-4 border-b text-center text-lg">
                   {celebrity.biography.facebook ? (
-                    <Link href={celebrity.biography.facebook} className="text-blue-500">Profile</Link>
+                    <Link href={celebrity.biography.facebook || ''} className="text-blue-500">Profile</Link>
                   ) : 'NaN'}
                 </td>
                 <td className="py-2 px-4 border-b text-center text-lg">
                   {celebrity.biography.youtube ? (
-                    <Link href={celebrity.biography.youtube} className="text-blue-500">Channel</Link>
+                    <Link href={celebrity.biography.youtube || ''} className="text-blue-500">Channel</Link>
                   ) : 'NaN'}
                 </td>
               </tr>
@@ -205,22 +205,22 @@ export default function BoiTableComponent({ data }) {
             </div>
             <div className="py-2 px-4 border-b text-lg">
               <span className="font-bold">Instagram:</span> {celebrity.biography.instagram ? (
-                <Link href={celebrity.biography.instagram} className="text-blue-500">Profile</Link>
+                <Link href={celebrity.biography.instagram || ""} className="text-blue-500">Profile</Link>
               ) : 'NaN'}
             </div>
             <div className="py-2 px-4 border-b text-lg">
               <span className="font-bold">Twitter:</span> {celebrity.biography.twitter ? (
-                <Link href={celebrity.biography.twitter} className="text-blue-500">Profile</Link>
+                <Link href={celebrity.biography.twitter || ""} className="text-blue-500">Profile</Link>
               ) : 'NaN'}
             </div>
             <div className="py-2 px-4 border-b text-lg">
               <span className="font-bold">Facebook:</span> {celebrity.biography.facebook ? (
-                <Link href={celebrity.biography.facebook} className="text-blue-500">Profile</Link>
+                <Link href={celebrity.biography.facebook || ""} className="text-blue-500">Profile</Link>
               ) : 'NaN'}
             </div>
             <div className="py-2 px-4 border-b text-lg">
               <span className="font-bold">YouTube:</span> {celebrity.biography.youtube ? (
-                <Link href={celebrity.biography.youtube} className="text-blue-500">Channel</Link>
+                <Link href={celebrity.biography.youtube || ""} className="text-blue-500">Channel</Link>
               ) : 'NaN'}
             </div>
           </div>

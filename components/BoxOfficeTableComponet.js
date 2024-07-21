@@ -2,7 +2,7 @@
 // "use client"
 // import { useState } from 'react';
 
-const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+const apiUrl = process.env.API_URL;
 
 
 async function fetchData() {

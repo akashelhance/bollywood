@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+const apiUrl = process.env.API_URL;
 
 
 async function fetchData() {

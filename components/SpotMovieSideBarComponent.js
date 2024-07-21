@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 
-const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+const apiUrl = process.env.API_URL;
 
 
 async function fetchData() {
@@ -20,13 +20,15 @@ async function fetchData() {
 export default async function SpotMovieSideBarComponent(){
   
   const movies= await fetchData()
+  console.log(movies)
     return <>
 <div className="border-2 p-2 border-red-800 mb-6">
   <h4 className="px-4 py-2 bg-rose-100 font-bold text-2xl text-center border border-4 border-rose-400">
-    Spot Light Movies
+    Spot Light Movies 
   </h4>
   <ul role="list" className="divide-y divide-gray-100">
     {movies?.movies?.map((item, index) => (
+      
       <li key={index} className="flex flex-col md:flex-row justify-between gap-x-6 py-5">
         <div className="flex min-w-0 gap-x-4">
           <Image

@@ -7,7 +7,7 @@ import CelebRelComponent from "@/components/CelebRelComponent";
 import SpotCelebSideBarComponent from "@/components/SpotCelebSideBarComponent"
 import TabLinkCelebComponent from "@/components/TabLinkCelebComponent"
 
-const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+const apiUrl = process.env.API_URL;
 
 
 export async function generateMetadata({ params, searchParams }, parent) {

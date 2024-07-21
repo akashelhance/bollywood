@@ -8,7 +8,7 @@ import SpotCelebSideBarComponent from "@/components/SpotCelebSideBarComponent"
 import TabLinkCelebComponent from "@/components/TabLinkCelebComponent"
 import Link from "next/link"
 
-const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+const apiUrl = process.env.API_URL;
 
 export default async function productRecommendSlugPage({ params }) {
 

@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image";
-const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+const apiUrl = process.env.API_URL;
 
 
 async function fetchData() {
@@ -47,7 +47,7 @@ const celebrities= await fetchData()
         // style={{
         //   objectFit: 'contain'
         // }}
-         unoptimized
+        
          quality={100}
          width={100}
          height={100}

@@ -4,7 +4,7 @@ import SpotSeriesSideBarComponent from "@/components/SpotSeriesSideBarComponent"
 import UpcomingWebSeriesComponent from "@/components/UpcomingWebSeriesComponent";
 import Image from "next/image";
 
-const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+const apiUrl = process.env.API_URL;
 
 export const metadata = {
     title: "Upcoming Web Series Update| Upcoming Web Series in 2024",

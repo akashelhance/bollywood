@@ -8,7 +8,7 @@ import TabLinkCelebComponent from "@/components/TabLinkCelebComponent"
 import UpcomingMovieSlugCardComponent from "@/components/UpcomingMovieSlugCardComponent"
 
 
-const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+const apiUrl = process.env.API_URL;
 
 export async function generateMetadata({ params, searchParams }, parent) {
     // read route params

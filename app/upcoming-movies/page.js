@@ -3,7 +3,7 @@ import PopularPostSideBarComponent from "@/components/PopularPostSideBarComponen
 import SpotMovieSideBarComponent from "@/components/SpotMovieSideBarComponent";
 import UpcomingMovieCardComponent from "@/components/UpcomingMovieCardComponent";
 
-const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+const apiUrl = process.env.API_URL;
 
 export const metadata = {
     title: "Upcoming Bollywod Movies Update| Upcoming Movies in 2024",

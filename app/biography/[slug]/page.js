@@ -86,12 +86,12 @@ export default async function BiographySlugPage({ params }) {
 
           <BoiTableComponent data={[data]} />
 
-          {data.biography.celebrity_controversies && data.biography.celebrity_controversies.length >0 && <CelebCovComponent controversies={data.biography.celebrity_controversies} data={data} />}
+          {data.biography?.celebrity_controversies && data.biography?.celebrity_controversies.length >0 && <CelebCovComponent controversies={data.biography.celebrity_controversies} data={data} />}
           {/* <CelebRelComponent relationship={data.biography.celebrity_relationship} data={data} /> */}
 
-         { Fact.length > 0 && <CelebFactComponent celebrityFacts={Fact} data={data} />}
+         { Fact?.length > 0 && <CelebFactComponent celebrityFacts={Fact} data={data} />}
 
-        { FAQ.length > 0 && <CelebFaqComponent faqs={FAQ} data={[data]} />}
+        { FAQ?.length > 0 && <CelebFaqComponent faqs={FAQ} data={[data]} />}
 
         </div>
 

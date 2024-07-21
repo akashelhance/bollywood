@@ -10,6 +10,23 @@ import UpcomingMovieSlugCardComponent from "@/components/UpcomingMovieSlugCardCo
 
 const apiUrl = process.env.NEXT_PUBLIC_API_URL;
 
+export async function generateMetadata({ params, searchParams }, parent) {
+    // read route params
+    let id = params.slug;
+    const string = "Upcoming Movies 2024, 2025, 2026";
+    // const biography = "Biography"
+
+
+    const result = id + " " + string
+
+    return {
+        title: result,
+        description: "In this article ",
+        keywords: ""
+
+    }
+}
+
 
 
 
@@ -17,58 +34,49 @@ export default async function UpcomingMoviesSlugPage({ params }) {
 
     async function fetchData() {
         const res = await fetch(`${apiUrl}/api/movie/upcoming/${params.slug}`);
-      
+
         if (!res.ok) {
-          throw new Error('Failed to fetch data');
+            throw new Error('Failed to fetch data');
         }
-      
+
         return res.json();
-      }
+    }
 
-      const data = await fetchData()
-
-
-    return <>
-
-        <div className="bg-grey-100 px-6 pt-16 pb-20 flex flex-col md:flex-row">
-            {/* First Section (5/6 width) */}
-            <div className="w-full md:w-5/6 mb-4 md:mb-0 ">
-
-
-
-
-
-                {/* Content for the first section */}
-                <div className="max-w-7xl  p-6  shadow-xl rounded-lg bg-orange-50">
-
-                    <CelebDescWithImageComponent data={data} />
-
-
-                    {/* Content for the Product Recommend section */}
-                    <TabLinkCelebComponent  id={params.slug} />
-                           
-                            <UpcomingMovieSlugCardComponent data={data}/>
-
-
+    try {
+        const data = await fetchData();
+    
+        return (
+            <div className="bg-grey-100 px-6 pt-16 pb-20 flex flex-col md:flex-row">
+                {/* First Section (5/6 width) */}
+                <div className="w-full md:w-5/6 mb-4 md:mb-0">
+                    {/* Content for the first section */}
+                    <div className="max-w-7xl p-6 shadow-xl rounded-lg bg-orange-50">
+                        {data && (
+                            <>
+                                <CelebDescWithImageComponent data={data} />
+                                <TabLinkCelebComponent id={params.slug} />
+                                <UpcomingMovieSlugCardComponent data={data} />
+                            </>
+                        )}
+                        {!data && <p>No data available</p>}
+                    </div>
                 </div>
-
-
+    
+                {/* Second Section (1/6 width) */}
+                <div className="w-full md:w-1/6 sm:container">
+                    {/* Content for the second section */}
+                    <SpotCelebSideBarComponent />
+                    {/* <PopularPostSideBarComponent /> */}
+                </div>
             </div>
-            {/* Second Section (1/6 width) */}
-            <div className="w-full md:w-1/6 sm:container">
-
-
-                {/* Content for the second section */}
-
-                <SpotCelebSideBarComponent />
-
-                {/* <PopularPostSideBarComponent /> */}
-
-
+        );
+    } catch (error) {
+        console.error('Error fetching data:', error);
+        // Handle the error case, e.g., show an error message
+        return (
+            <div className="bg-grey-100 px-6 pt-16 pb-20 flex flex-col md:flex-row">
+                <p>Error loading data</p>
             </div>
-        </div>
-
-
-
-    </>
+        );
+    }
 }

@@ -37,9 +37,7 @@ export default async function SpotCelebSideBarComponent(){
                 <p className="text-sm font-semibold leading-6 text-gray-900">
                   {item.celebrity[0].name}
                 </p>
-                <p className="mt-1 truncate text-xs leading-5 text-gray-500">
-                  {item.celebrity[0].roles}
-                </p>
+               
               </div>
             </div>
             <div className="hidden md:flex md:flex-col md:items-end">

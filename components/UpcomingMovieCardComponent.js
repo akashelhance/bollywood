@@ -67,7 +67,7 @@ export default function UpcomingMovieCardComponent({ data }) {
                 {movie.cast.length > 0 ? movie.cast.map((member, i) => (
                   <Link
                     key={i}
-                    href={`/biography/${member.celebrity_slug}`}
+                    href={`#`}
                     className="text-blue-500 hover:underline transition duration-500 ease-in-out hover:text-blue-700 font-bold"
                   >
                     {member.name}

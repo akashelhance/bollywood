@@ -17,7 +17,7 @@ export default function CelebDescWithImageComponent({ data }) {
   }
 
   // Truncate the description at the next full stop after 600 characters
-  const description = data.description.length > 600
+  const description = data.description?.length > 600
     ? truncateAtFullStop(data.description, 600)
     : data.description;
 
@@ -46,7 +46,7 @@ export default function CelebDescWithImageComponent({ data }) {
             Role
           </span>
           <span className="text-gray-900 text-normal">
-            {data.roles.map((role, index) => (
+            {data.roles?.map((role, index) => (
               <span
                 key={index}
                 className="font-bold text-rose-800"
@@ -62,7 +62,7 @@ export default function CelebDescWithImageComponent({ data }) {
             Industry
           </span>
           <span className="text-gray-900 text-normal">
-            {data.industry.map((industry, index) => (
+            {data.industry?.map((industry, index) => (
               <span
                 key={index}
                 className="font-bold text-rose-800"

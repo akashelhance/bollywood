@@ -26,7 +26,7 @@ const Navbar = () => {
   return (
     <nav className="bg-gradient-to-r from-pink-500 to-orange-500 text-white shadow-lg rounded-b-lg fixed w-full top-0 left-0 z-50 p-4">
       <div className="flex justify-between items-center">
-        <div className="text-2xl font-bold">Your Logo</div>
+        <div className="text-2xl font-bold">FilmiWood</div>
         <button
           className="block lg:hidden focus:outline-none"
           onClick={toggleMenu}

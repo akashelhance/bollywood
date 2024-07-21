@@ -47,7 +47,7 @@ const celebrities= await fetchData()
         // style={{
         //   objectFit: 'contain'
         // }}
-        
+        unoptimized
          quality={100}
          width={100}
          height={100}

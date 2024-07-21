@@ -1,10 +1,10 @@
 import Link from "next/link"
 import Image from "next/image"
 
-export default function CarCollectionPostComponent(){
+export default function CarCollectionPostComponent() {
     return <>
-    
-    <div className="mx-auto shadow-xl rounded-lg bg-rose-50">
+
+        <div className="mx-auto shadow-xl rounded-lg bg-rose-50">
             {/* Full-width Image */}
 
 
@@ -19,20 +19,20 @@ export default function CarCollectionPostComponent(){
                 <Link href="#" className="text-purple-900 font-bold">India 2024</Link>
             </div>
 
-     
+
 
             <div className="max-w-screen-lg mx-auto p-4">
-  <Image
-   width={100}
-   height={100}
-    src="https://source.unsplash.com/random/1200x800"
-    alt="Featured Image"
-    className="w-full h-auto shadow-lg rounded-md"
-  />
-</div>
+                <Image
+                    width={100}
+                    height={100}
+                    src="https://source.unsplash.com/random/1200x800"
+                    alt="Featured Image"
+                    className="w-full h-auto shadow-lg rounded-md"
+                />
+            </div>
 
 
-         
+
             <hr className="bg-purple-700 mt-2 mb-6" />
 
             {/* Blog Description */}
@@ -58,13 +58,13 @@ export default function CarCollectionPostComponent(){
 
 
             <div className="flex items-center justify-center mb-6">
-            <Link href="#" className="bg-gradient-to-r from-pink-500 to-orange-500 text-white shadow-lg rounded-b-lg font-bold py-2 px-4 rounded inline-flex items-center transform transition-transform duration-300 shadow-md hover:bg-purple-800 hover:scale-105">
+                <Link href="#" className="bg-gradient-to-r from-pink-500 to-orange-500 text-white shadow-lg rounded-b-lg font-bold py-2 px-4 rounded inline-flex items-center transform transition-transform duration-300 shadow-md hover:bg-purple-800 hover:scale-105">
 
-                  
+
                     Affiliate Link
 
-                    </Link>
-                
+                </Link>
+
             </div>
 
             <h2 className="text-2xl font-bold mb-2 text-gray-900">How To Promote Affiliate Products:</h2>
@@ -74,13 +74,13 @@ export default function CarCollectionPostComponent(){
             </p>
 
             <div className="max-w-screen-md mx-auto p-4">
-  <Image
-    src="https://source.unsplash.com/random/800x600?sig=1"
-    alt="Blog Image 1"
-    className="w-full h-auto shadow-md rounded-md mb-4"
-  />
+                <Image
+                    src="https://source.unsplash.com/random/800x600?sig=1"
+                    alt="Blog Image 1"
+                    className="w-full h-auto shadow-md rounded-md mb-4"
+                />
 
-</div>
+            </div>
 
 
             <p className="text-lg text-gray-700 mb-6">
@@ -90,7 +90,7 @@ export default function CarCollectionPostComponent(){
             {/* Tags Button */}
             <div className="flex flex-wrap gap-2">
                 <Link href="#" className="bg-gradient-to-r from-pink-500 to-orange-500 text-white shadow-lg rounded-b-lg font-bold py-2 px-4 rounded inline-flex items-center transform transition-transform duration-300 shadow-md hover:bg-purple-800 hover:scale-105">Affiliate Marketing</Link>
-              
+
             </div>
         </div>
 

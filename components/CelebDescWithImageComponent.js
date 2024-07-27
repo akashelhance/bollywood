@@ -28,7 +28,7 @@ export default function CelebDescWithImageComponent({ data }) {
   <div className="w-full flex flex-col md:flex-row items-center border border-4 border-rose-800 rounded-lg shadow-md hover:shadow-lg transition duration-300">
     <div className="w-full md:w-64 h-96 mb-4 md:mb-0">
       <Image
-      
+      unoptimized
        width={100}
        height={100}
         src={data.image}

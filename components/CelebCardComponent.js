@@ -44,7 +44,7 @@ const celebrities= await fetchData()
      <div className=" sm:w-1/3 flex-shrink-0">
        <Link href={`/celebrity/${celebrity.celebrity_slug}`}>
          <Image
-       unoptimized
+  
          quality={100}
          width={100}
          height={100}

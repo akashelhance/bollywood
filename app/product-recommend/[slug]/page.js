@@ -13,7 +13,7 @@ const apiUrl = process.env.API_URL;
 export default async function productRecommendSlugPage({ params }) {
 
   async function fetchData() {
-    const res = await fetch(`${apiUrl}/api/products/celebrity/${params.slug}`);
+    const res = await fetch(`${apiUrl}/api/products/celebrity/${params.slug}` , { cache: 'no-cache', next: { revalidate: 0 }});
   
     if (!res.ok) {
       throw new Error('Failed to fetch data');

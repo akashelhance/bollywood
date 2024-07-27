@@ -32,7 +32,9 @@ export async function generateMetadata({ params, searchParams }, parent) {
 export default async function BiographySlugPage({ params }) {
 
   async function fetchData() {
-    const res = await fetch(`${apiUrl}/api/celebrity/biography/${params.slug}`);
+    const res = await fetch(`${apiUrl}/api/celebrity/biography/${params.slug}`
+      , { cache: 'no-cache', next: { revalidate: 0 }}
+    );
 
     if (!res.ok) {
       throw new Error('Failed to fetch data');

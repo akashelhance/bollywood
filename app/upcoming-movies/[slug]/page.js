@@ -33,7 +33,7 @@ export async function generateMetadata({ params, searchParams }, parent) {
 export default async function UpcomingMoviesSlugPage({ params }) {
 
     async function fetchData() {
-        const res = await fetch(`${apiUrl}/api/movie/upcoming/${params.slug}`);
+        const res = await fetch(`${apiUrl}/api/movie/upcoming/${params.slug}`,  { cache: 'no-cache', next: { revalidate: 0 }});
 
         if (!res.ok) {
             throw new Error('Failed to fetch data');

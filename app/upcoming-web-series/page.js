@@ -14,7 +14,7 @@ export const metadata = {
 
 
 async function fetchData() {
-    const res = await fetch(`${apiUrl}/api/webseries/upcoming`);
+    const res = await fetch(`${apiUrl}/api/webseries/upcoming` , { cache: 'no-cache', next: { revalidate: 0 }});
 
     if (!res.ok) {
         throw new Error('Failed to fetch data');

@@ -21,6 +21,10 @@ export default function CarCollectionPostComponent() {
 
 
 
+
+
+
+
             <div className="max-w-screen-lg mx-auto p-4">
                 <Image
                     width={100}

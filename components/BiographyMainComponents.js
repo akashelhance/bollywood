@@ -6,7 +6,7 @@ const apiUrl = process.env.API_URL;
 
 
 async function fetchData() {
-    const res = await fetch(`${apiUrl}/api/celebrity/`);
+    const res = await fetch(`${apiUrl}/api/celebrity/` , { cache: 'no-cache', next: { revalidate: 0 }});
 
     if (!res.ok) {
         throw new Error('Failed to fetch data');

@@ -10,7 +10,7 @@ const SearchPage = () => {
   useEffect(() => {
     if (query) {
       // Fetch search results based on the query
-      fetch(`/api/search?q=${query}`)
+      fetch(`/api/search?q=${query}`) , { cache: 'no-cache', next: { revalidate: 0 }}
         .then(response => response.json())
         .then(data => setResults(data.results))
         .catch(error => console.error('Error fetching search results:', error));
